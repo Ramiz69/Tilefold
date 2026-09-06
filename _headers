@@ -1,0 +1,5 @@
+# Apple требует, чтобы файл привязки отдавался как JSON, иначе молча его
+# не принимает. Ради этого правила сайт и переехал с GitHub Pages: там
+# заголовки задать нечем.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
