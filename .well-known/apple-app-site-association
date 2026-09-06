@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["8AD8N54BY6.Kichibekov-Ramiz.m2048"],
+        "components": [
+          { "/": "/daily", "comment": "Задача дня" }
+        ]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": ["8AD8N54BY6.Kichibekov-Ramiz.m2048.Clip"]
+  }
+}
