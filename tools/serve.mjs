@@ -20,6 +20,8 @@ const rules = [];
 for (const line of readFileSync(join(DIST, '_headers'), 'utf8').split('\n')) {
   if (!line.trim() || line.trim().startsWith('#')) continue;
   if (!/^\s/.test(line)) rules.push({ re: new RegExp('^' + line.trim().replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$'), headers: [] });
+  // «! Имя» – как у Cloudflare: снять заголовок, выставленный правилом пошире.
+  else if (line.trim().startsWith('!')) rules.at(-1).headers.push([line.trim().slice(1).trim(), null]);
   else { const i = line.indexOf(':'); rules.at(-1).headers.push([line.slice(0, i).trim(), line.slice(i + 1).trim()]); }
 }
 
@@ -32,8 +34,11 @@ createServer((req, res) => {
     file = join(file, 'index.html');
   }
   let status = 200;
+  // /daily отдаётся из daily.html, как у Cloudflare (html_handling по умолчанию).
+  if (!existsSync(file) && existsSync(file + '.html')) file += '.html';
   if (!existsSync(file)) { file = join(DIST, '404.html'); status = 404; }
-  for (const r of rules) if (r.re.test(path)) for (const [k, v] of r.headers) res.setHeader(k, v);
+  // Тип по расширению – только если _headers его не задал (файл привязки App Clip – JSON без расширения).
   res.setHeader('Content-Type', TYPES[extname(file)] || 'application/octet-stream');
+  for (const r of rules) if (r.re.test(path)) for (const [k, v] of r.headers) v === null ? res.removeHeader(k) : res.setHeader(k, v);
   res.writeHead(status).end(readFileSync(file));
 }).listen(PORT, '127.0.0.1', () => console.log(`public/ on http://localhost:${PORT}/ (headers from _headers applied)`));
