@@ -1,0 +1,110 @@
+/* Общие токены и основа. Своих цветов у сайта нет: фон, поднос, клетки, текст и плитки задаёт
+   выбранная палитра игры (CSS палитр сборка дописывает в конец из src/data/palettes.json).
+   Всё остальное выводится из них, поэтому любая из восьми палитр собирает страницу целиком. */
+:root {
+  color-scheme: light;
+  --muted: color-mix(in srgb, var(--ink) 86%, var(--bg));
+  --line: color-mix(in srgb, var(--ink) 16%, transparent);
+  --surface: color-mix(in srgb, var(--cell) 32%, var(--bg));
+  --surface-2: color-mix(in srgb, var(--cell) 55%, var(--bg));
+  --menu-bg: color-mix(in srgb, var(--bg) 94%, var(--ink));
+  --focus: var(--ink);
+  --shadow-menu: 0 18px 40px -16px rgba(30, 24, 18, .35), 0 2px 6px rgba(30, 24, 18, .08);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --wrap: 72rem;
+  --gutter: max(1.25rem, env(safe-area-inset-left));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; --shadow-menu: 0 18px 40px -14px rgba(0, 0, 0, .7), 0 2px 6px rgba(0, 0, 0, .3); }
+}
+:root[data-theme="dark"] { color-scheme: dark; --shadow-menu: 0 18px 40px -14px rgba(0, 0, 0, .7), 0 2px 6px rgba(0, 0, 0, .3); }
+:root[data-theme="light"] { color-scheme: light; }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font: 17px/1.55 var(--font);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  transition: background-color .45s ease, color .45s ease;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip {
+  position: absolute; inset-inline-start: 16px; top: -60px; z-index: 100; padding: 10px 14px; border-radius: 10px;
+  background: var(--menu-bg); color: var(--ink); font-weight: 600; transition: top .2s var(--ease-out);
+}
+.skip:focus { top: 12px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+
+/* Значок App Store: чёрный в светлой теме, белый в тёмной. */
+.badge { display: inline-block; flex: none; border-radius: 10px; }
+.badge img { height: 48px; width: auto; }
+.badge .badge-white { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .badge .badge-black { display: none; }
+  :root:not([data-theme="light"]) .badge .badge-white { display: block; }
+}
+:root[data-theme="dark"] .badge .badge-black { display: none; }
+:root[data-theme="dark"] .badge .badge-white { display: block; }
+
+.chip {
+  appearance: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  font: 600 13px/1 var(--font); color: var(--ink); text-decoration: none;
+  padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  transition: background-color .2s var(--ease-out), transform .2s var(--ease-out);
+}
+.chip:hover { background: var(--surface-2); }
+.chip:active { transform: scale(.96); }
+
+/* ---------- меню в шапке: язык и оформление (menus.js) ---------- */
+.topnav { display: flex; gap: 8px; align-items: center; }
+.menu-wrap { position: relative; }
+.menu-btn { gap: 6px; padding-inline-end: 9px; }
+.menu-btn .chev { width: 12px; height: 12px; margin-inline-start: -1px; opacity: .7; transition: transform .2s var(--ease-out); }
+.open > .menu-btn .chev { transform: rotate(180deg); }
+.menu-btn .ico { width: 15px; height: 15px; margin-block: -1px; }
+.tv { display: none; align-items: center; gap: 6px; }
+:root:not([data-theme]) .tv-auto, :root[data-theme="light"] .tv-light, :root[data-theme="dark"] .tv-dark { display: inline-flex; }
+.menu {
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 20;
+  min-width: 11rem; max-height: min(70vh, 34rem); overflow-y: auto; margin: 0; padding: 5px; list-style: none;
+  border-radius: 15px; border: 1px solid var(--line); background: var(--menu-bg);
+  box-shadow: var(--shadow-menu);
+  transform-origin: top right;
+  opacity: 0; visibility: hidden; transform: translateY(-4px) scale(.96);
+  transition: opacity .13s ease-out, transform .13s ease-out, visibility 0s linear .13s;
+}
+.open > .menu { opacity: 1; visibility: visible; transform: none; transition: opacity .18s var(--ease-out), transform .18s var(--ease-out), visibility 0s; }
+.menu::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 10px; }
+.menu-item {
+  appearance: none; display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px;
+  padding: 0 10px 0 11px; border: 0; border-radius: 10px; background: none; cursor: pointer;
+  font: 500 15px/1.2 var(--font); color: var(--ink); text-align: start; text-decoration: none; white-space: nowrap;
+  transition: background-color .12s ease;
+}
+.menu-item .tick { margin-inline-start: auto; padding-inline-start: 12px; width: 28px; visibility: hidden; }
+.menu-item[aria-checked="true"] .tick, .menu-item[aria-current] .tick { visibility: visible; }
+.menu-item[aria-checked="true"], .menu-item[aria-current] { font-weight: 600; }
+.menu-item:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; border-radius: 10px; background: var(--surface); }
+@media (hover: hover) and (pointer: fine) { .menu-item:hover { background: var(--surface); } }
+@media (max-width: 420px) {
+  .tvl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+.no-js .lang-menu:is(:hover, :focus-within) > .menu { opacity: 1; visibility: visible; transform: none; }
+.no-js .theme-menu { display: none; }
+.rm .menu, .rm .menu-btn .chev { transform: none; }
+.rm .open > .menu { transition: opacity .15s ease-out, visibility 0s; }
+.rm body { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .menu, .menu-btn .chev { transform: none; }
+  .open > .menu { transition: opacity .15s ease-out, visibility 0s; }
+  body { transition: none; }
+}

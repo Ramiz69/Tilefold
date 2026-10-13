@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="{{lang}}" dir="{{dir}}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FAF8EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+<title>{{meta.title}}</title>
+<meta name="description" content="{{meta.description}}">
+<link rel="canonical" href="{{url}}">
+{{alternates}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tilefold">
+<meta property="og:title" content="{{meta.ogTitle}}">
+<meta property="og:description" content="{{meta.ogDescription}}">
+<meta property="og:url" content="{{url}}">
+<meta property="og:image" content="{{site}}/og/{{ogImage}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{meta.ogAlt}}">
+{{ogLocales}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{meta.ogTitle}}">
+<meta name="twitter:description" content="{{meta.ogDescription}}">
+<meta name="twitter:image" content="{{site}}/og/{{ogImage}}">
+<!-- Баннер приложения в Safari и карточка App Clip. -->
+<meta name="apple-itunes-app" content="app-id=1110343407, app-clip-bundle-id=Kichibekov-Ramiz.m2048.Clip">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="{{@css/home.css}}">
+<script src="{{@js/theme-init.js}}"></script>
+<script type="module" src="{{@js/main.js}}"></script>
+{{modulepreload}}
+<script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body>
+<a class="skip" href="#main">{{ui.skip}}</a>
+
+<header class="topbar wrap">
+  <a class="brand" href="{{path}}"><img src="{{@assets/icon-192.webp}}" alt="" width="32" height="32">Tilefold</a>
+  <nav class="topnav" aria-label="{{ui.langNav}}">
+    {{menus}}
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-head">
+    <h1 id="hero-title">{{hero.title}}</h1>
+  </div>
+  <div class="board-wrap">
+    <div class="board" data-board tabindex="0" role="application" aria-label="{{ui.boardLabel}}" aria-describedby="board-status"></div>
+    <p class="board-status" id="board-status">
+      <span data-board-hint data-you="{{ui.boardYou}}">{{ui.boardHint}}</span>
+      <span>{{ui.score}} <output data-score aria-live="off">0</output></span>
+    </p>
+  </div>
+  <div class="hero-cta">
+    <p class="lede">{{hero.lede}}</p>
+    <div class="get">
+      {{badgeHero}}
+      <span class="price">{{hero.price}}</span>
+    </div>
+  </div>
+  <fieldset class="palettes" data-palettes>
+    <legend>{{palettes.label}}</legend>
+    {{#palettes.list}}<label class="swatch sw-{{.id}}"><input type="radio" name="palette" value="{{.id}}"><span class="sw" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="vh">{{.name}}</span></label>{{/palettes.list}}
+  </fieldset>
+</section>
+
+<section class="modes" aria-labelledby="modes-title">
+  <div class="wrap">
+    <h2 id="modes-title">{{modes.title}}</h2>
+    <p class="section-lede">{{modes.lede}}</p>
+    <ul class="rules">
+      {{#modes.items}}<li class="rule">
+        <p class="rule-tiles" aria-hidden="true">{{.tiles}}</p>
+        <h3>{{.name}}</h3>
+        <p>{{.body}}</p>
+      </li>{{/modes.items}}
+    </ul>
+  </div>
+</section>
+
+<section class="feature" id="etudes" aria-labelledby="etudes-title">
+  <div class="wrap feature-grid">
+    <div class="feature-text">
+      <h2 id="etudes-title">{{etudes.title}}</h2>
+      <p>{{etudes.body}}</p>
+      <ul class="points">{{#etudes.points}}<li>{{.}}</li>{{/etudes.points}}</ul>
+    </div>
+    <figure class="shot"><img src="{{shots.etude}}" alt="{{etudes.alt}}" width="360" height="782" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="feature flip" id="daily" aria-labelledby="daily-title">
+  <div class="wrap feature-grid">
+    <div class="feature-text">
+      <h2 id="daily-title">{{daily.title}}</h2>
+      <p>{{daily.body}}</p>
+      <h3>{{daily.duelTitle}}</h3>
+      <p>{{daily.duelBody}}</p>
+    </div>
+    <figure class="shot"><img src="{{shots.daily}}" alt="{{daily.alt}}" width="360" height="782" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="feature" id="help" aria-labelledby="help-title">
+  <div class="wrap feature-grid two-shots">
+    <div class="feature-text">
+      <h2 id="help-title">{{help.title}}</h2>
+      <h3>{{help.hintTitle}}</h3>
+      <p>{{help.hintBody}}</p>
+      <h3>{{help.reviewTitle}}</h3>
+      <p>{{help.reviewBody}}</p>
+    </div>
+    <div class="shots">
+      <figure class="shot"><img src="{{shots.hint}}" alt="{{help.hintAlt}}" width="360" height="782" loading="lazy"></figure>
+      <figure class="shot"><img src="{{shots.review}}" alt="{{help.reviewAlt}}" width="360" height="782" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="feature flip" id="sizes" aria-labelledby="sizes-title">
+  <div class="wrap feature-grid two-shots">
+    <div class="feature-text">
+      <h2 id="sizes-title">{{sizes.title}}</h2>
+      <p>{{sizes.body}}</p>
+      <p>{{sizes.palettes}}</p>
+    </div>
+    <div class="shots">
+      <figure class="shot"><img src="{{shots.sizes}}" alt="{{sizes.sizesAlt}}" width="360" height="782" loading="lazy"></figure>
+      <figure class="shot"><img src="{{shots.palettes}}" alt="{{sizes.palettesAlt}}" width="360" height="782" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="everywhere" aria-labelledby="everywhere-title">
+  <div class="wrap">
+    <h2 id="everywhere-title">{{everywhere.title}}</h2>
+    <ul class="facts">
+      {{#everywhere.facts}}<li>{{.icon}}<h3>{{.title}}</h3><p>{{.body}}</p></li>{{/everywhere.facts}}
+    </ul>
+  </div>
+</section>
+
+<section class="privacy-note" aria-labelledby="privacy-title">
+  <div class="wrap narrow">
+    <h2 id="privacy-title">{{privacy.title}}</h2>
+    <p>{{privacy.body}}</p>
+    <p><a href="{{pages.privacy}}">{{privacy.link}}</a></p>
+  </div>
+</section>
+
+<section class="plus" id="plus" aria-labelledby="plus-title">
+  <div class="wrap narrow">
+    <h2 id="plus-title">{{plus.title}}</h2>
+    <p class="section-lede">{{plus.lede}}</p>
+    <table class="compare">
+      <caption class="vh">{{plus.caption}}</caption>
+      <thead><tr><th scope="col"><span class="vh">{{plus.feature}}</span></th><th scope="col">{{plus.free}}</th><th scope="col">Tilefold Plus</th></tr></thead>
+      <tbody>
+        {{#plus.rows}}<tr><th scope="row">{{.label}}</th><td>{{.free}}</td><td>{{.plus}}</td></tr>{{/plus.rows}}
+      </tbody>
+    </table>
+    <p class="plus-note">{{plus.note}}</p>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <h2 id="faq-title">{{faq.title}}</h2>
+    <div class="faq-list">
+      {{#faq.items}}<details><summary>{{.q}}</summary><div class="answer">{{.a}}</div></details>{{/faq.items}}
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-title">
+  <div class="wrap narrow">
+    <h2 id="final-title">{{final.title}}</h2>
+    <p>{{final.body}}</p>
+    <div class="get">{{badgeLazy}}<a class="final-link" href="/daily">{{final.daily}}</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <p class="footer-brand"><img src="{{@assets/icon-192.webp}}" alt="" width="40" height="40" loading="lazy"><span><strong>Tilefold</strong><br>{{footer.tagline}}</span></p>
+    <nav class="footer-nav" aria-label="{{footer.navLabel}}">
+      <a href="{{pages.support}}">{{footer.support}}</a>
+      <a href="{{pages.privacy}}">{{footer.privacy}}</a>
+      <a href="{{pages.press}}">{{footer.press}}</a>
+      <a href="/daily">{{footer.daily}}</a>
+    </nav>
+    <p class="footer-small">{{footer.small}}</p>
+  </div>
+</footer>
+</body>
+</html>

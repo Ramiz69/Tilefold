@@ -1,0 +1,34 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "8AD8N54BY6.Kichibekov-Ramiz.m2048"
+        ],
+        "components": [
+          {
+            "/": "/daily",
+            "comment": "Задача дня"
+          },
+          {
+            "/": "/daily/",
+            "comment": "Задача дня, со слешем на конце"
+          },
+          {
+            "/": "/duel",
+            "comment": "Вызов на ту же доску"
+          },
+          {
+            "/": "/duel/",
+            "comment": "Вызов, со слешем на конце"
+          }
+        ]
+      }
+    ]
+  },
+  "appclips": {
+    "apps": [
+      "8AD8N54BY6.Kichibekov-Ramiz.m2048.Clip"
+    ]
+  }
+}

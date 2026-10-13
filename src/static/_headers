@@ -1,0 +1,31 @@
+# Заголовки ответов Cloudflare. https://developers.cloudflare.com/workers/static-assets/headers/
+# Строгий CSP: ни встроенных скриптов, ни встроенных стилей – всё файлами из /assets/.
+# Блок JSON-LD – данные, а не скрипт, script-src на него не действует.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=()
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'none'; connect-src 'none'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# Страницы задачи дня и вызова живут со времён первого сайта и держат стили и скрипт в себе.
+# Строгий CSP их сломал бы, поэтому у них свой – с разрешением на встроенное.
+/daily
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+/duel
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+# Apple требует, чтобы файл привязки отдавался как JSON, иначе молча его не принимает.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+
+# Файлы с хэшем в имени: имя меняется вместе с содержимым.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og/*
+  Cache-Control: public, max-age=86400

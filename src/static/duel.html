@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tilefold – вызов</title>
+<!-- Карточка App Clip и баннер приложения в Safari: по ней вызов можно
+     принять, не устанавливая игру. -->
+<meta name="apple-itunes-app" content="app-id=1110343407, app-clip-bundle-id=Kichibekov-Ramiz.m2048.Clip">
+<meta name="description" content="Вызов в Tilefold: та же доска, тот же расклад, счёт соперника уже известен.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tilefold">
+<meta property="og:title" content="Tilefold – вызов">
+<meta property="og:description" content="Та же доска, тот же расклад. Счёт соперника известен – осталось его обойти.">
+<meta property="og:url" content="https://tilefold.app/duel">
+<meta property="og:image" content="https://tilefold.app/og-duel.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Доска Tilefold и надпись «Вызов»">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+    :root {
+        color-scheme: light dark;
+        --bg: #FAF8EF;
+        --ink: #776E65;
+        --strong: #5A5148;
+        --line: #E6E0D4;
+        --accent: #F2B179;
+        --tray: #BBADA0;
+        --cell: #CCC0B3;
+        --tile: #EEE4DA;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root { --bg: #141210; --ink: #C9C0B4; --strong: #F5EFE6; --line: #2A2724; --tray: #1E1C19; --cell: #2A2724; }
+    }
+    * { box-sizing: border-box; }
+    body {
+        margin: 0; background: var(--bg); color: var(--ink);
+        font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        display: grid; min-height: 100vh; place-items: center;
+    }
+    main { max-width: 30rem; padding: 2.5rem 1.5rem; text-align: center; }
+    .board {
+        display: inline-grid; grid-template-columns: repeat(4, 1fr); gap: 6px;
+        padding: 8px; border-radius: 16px; background: var(--tray); margin-bottom: 1.75rem;
+    }
+    .board i {
+        width: 40px; height: 40px; border-radius: 8px; background: var(--cell); display: grid;
+        place-items: center; font-weight: 700; color: #181412; font-style: normal; font-size: 15px;
+    }
+    .board i.f { background: var(--tile); }
+    .board i.g { background: #F2B179; }
+    h1 { color: var(--strong); font-size: 1.6rem; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+    p { margin: 0 0 1.5rem; }
+    /* Условия вызова прячутся, пока их не подставит скрипт: пустая строка
+       с прочерками выглядела бы поломкой, а ссылку открывают и без них. */
+    .terms { display: none; font-weight: 700; color: var(--strong); }
+    .terms.shown { display: block; }
+    .cta {
+        display: inline-block; padding: .85rem 1.6rem; border-radius: 999px;
+        background: var(--accent); color: #181412; font-weight: 700; text-decoration: none;
+    }
+    .note { font-size: .9rem; opacity: .75; margin-top: 1.75rem; }
+    .note a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+    <div class="board" aria-hidden="true">
+        <i class="g">8</i><i class="f">2</i><i></i><i></i>
+        <i class="f">4</i><i class="g">8</i><i class="f">2</i><i></i>
+        <i></i><i class="f">2</i><i class="g">16</i><i class="f">4</i>
+        <i></i><i></i><i class="f">4</i><i class="g">32</i>
+    </div>
+
+    <h1>Вызов</h1>
+    <p class="terms" id="terms"></p>
+    <p>Та же доска и тот же расклад, что были у соперника. Счёт, который нужно обойти, уже известен – попытка одна.</p>
+    <p>Откройте эту страницу на iPhone – вызов можно принять прямо здесь, не устанавливая игру.</p>
+
+    <a class="cta" href="https://apps.apple.com/app/id1110343407">Открыть Tilefold</a>
+
+    <p class="note">A Tilefold duel – same board, same deal, one attempt.<br>
+        <a href="/">Политика конфиденциальности · Privacy Policy</a></p>
+</main>
+<script>
+    // Условия вызова лежат в самой ссылке, поэтому страница может их
+    // показать, ничего не спрашивая у сервера. Значения проверяются: по
+    // этому адресу мог прийти кто угодно и с чем угодно.
+    (function () {
+        var modes = { 0: 'Степени 2', 1: 'Степени 3', 2: 'Фибоначчи' };
+        var query = new URLSearchParams(location.search);
+        var mode = modes[query.get('g')];
+        var size = parseInt(query.get('n'), 10);
+        var score = parseInt(query.get('t'), 10);
+
+        if (!mode || !(size >= 3 && size <= 7) || !(score >= 0)) return;
+
+        var terms = document.getElementById('terms');
+        terms.textContent = mode + ', ' + size + '×' + size + ' – обойти ' +
+            score.toLocaleString('ru-RU');
+        terms.className = 'terms shown';
+    })();
+</script>
+</body>
+</html>

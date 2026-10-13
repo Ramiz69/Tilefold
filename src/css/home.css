@@ -1,0 +1,192 @@
+/* Главная. Смелость – в одном месте: доска на первом экране, на которой можно сыграть, и
+   палитры, перекрашивающие страницу. Всё остальное – тихое: текст, скриншоты и воздух. */
+
+h1, h2, h3 { font-family: var(--rounded); color: var(--ink); text-wrap: balance; }
+h2 { font: 800 clamp(1.9rem, 3.6vw, 2.75rem)/1.08 var(--rounded); letter-spacing: -0.015em; margin: 0 0 1rem; }
+h3 { font: 700 1.2rem/1.3 var(--rounded); margin: 1.5rem 0 .4rem; }
+p { margin: 0 0 1rem; text-wrap: pretty; }
+.section-lede { font-size: 1.15rem; max-width: 40rem; }
+.narrow { max-width: 46rem; }
+section { scroll-margin-top: 1rem; }
+
+/* ---------- шапка ---------- */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding-top: max(1rem, env(safe-area-inset-top)); padding-bottom: .5rem;
+}
+.brand { display: inline-flex; align-items: center; gap: .55rem; font: 700 1.2rem var(--rounded); text-decoration: none; }
+.brand img { width: 32px; height: 32px; }
+
+/* ---------- первый экран ---------- */
+.hero {
+  --board: min(calc(100vw - 2.5rem), 30rem);
+  --gap: calc(var(--board) * 0.028);
+  --cell-size: calc((var(--board) - var(--gap) * 5) / 4);
+  --radius: calc(var(--board) * 0.035);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--board);
+  grid-template-areas: "head board" "cta board" ". palettes";
+  column-gap: clamp(2rem, 6vw, 6rem);
+  row-gap: 1.25rem;
+  align-items: start;
+  min-height: min(52rem, calc(100svh - 4rem));
+  align-content: center;
+  padding-block: 2rem 4rem;
+}
+.hero-head { grid-area: head; align-self: end; max-width: 32rem; }
+.hero-cta { grid-area: cta; max-width: 32rem; }
+.hero h1 { font: 800 clamp(2.3rem, 4.4vw, 3.5rem)/1.04 var(--rounded); letter-spacing: -0.02em; margin: 0; }
+.lede { font-size: 1.15rem; max-width: 34ch; margin-bottom: 2rem; }
+.get { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.price { font-size: .95rem; }
+
+.board-wrap { grid-area: board; }
+.board {
+  position: relative; width: var(--board); aspect-ratio: 1;
+  background: var(--tray); border-radius: var(--radius);
+  touch-action: none; outline: none; user-select: none; -webkit-user-select: none;
+  transition: background-color .45s ease;
+}
+.board:focus-visible { box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px var(--ink); }
+.cell, .tile {
+  position: absolute; top: 0; left: 0;
+  width: var(--cell-size); aspect-ratio: 1;
+  border-radius: calc(var(--radius) * 0.62);
+  transform: translate(calc(var(--gap) + (var(--cell-size) + var(--gap)) * var(--c)), calc(var(--gap) + (var(--cell-size) + var(--gap)) * var(--r)));
+}
+.cell { background: var(--cell); transition: background-color .45s ease; }
+.tile {
+  display: grid; place-items: center; z-index: 1;
+  font: 800 calc(var(--board) * 0.085)/1 var(--rounded); font-variant-numeric: tabular-nums;
+  transition: transform .12s ease-in-out, background-color .45s ease, color .45s ease;
+}
+.tile.still { transition: none; }
+.tile.under { z-index: 0; }
+.tile.big { font-size: calc(var(--board) * 0.068); }
+.tile.huge { font-size: calc(var(--board) * 0.054); }
+.tile.new { animation: appear .18s ease-out .1s backwards; }
+.tile.merged { animation: pop .2s ease-out .1s; }
+@keyframes appear { from { scale: .2; opacity: 0; } }
+@keyframes pop { 50% { scale: 1.12; } }
+.board-status { display: flex; justify-content: space-between; margin: .75rem .15rem 0; font: 600 .95rem var(--rounded); }
+.board-status output { font-variant-numeric: tabular-nums; }
+
+/* Плитки по уровню: .l1 – двойка (или первая плитка режима), цвета и цифра – из палитры. */
+.l1 { background: var(--t1); color: var(--k1); } .l2 { background: var(--t2); color: var(--k2); }
+.l3 { background: var(--t3); color: var(--k3); } .l4 { background: var(--t4); color: var(--k4); }
+.l5 { background: var(--t5); color: var(--k5); } .l6 { background: var(--t6); color: var(--k6); }
+.l7 { background: var(--t7); color: var(--k7); } .l8 { background: var(--t8); color: var(--k8); }
+.l9 { background: var(--t9); color: var(--k9); } .l10 { background: var(--t10); color: var(--k10); }
+.l11 { background: var(--t11); color: var(--k11); } .l12 { background: var(--t12); color: var(--k12); }
+.l13 { background: var(--t13); color: var(--k13); } .l14 { background: var(--t14); color: var(--k14); }
+.l15 { background: var(--t15); color: var(--k15); }
+
+.palettes { grid-area: palettes; display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+.palettes legend { width: 100%; margin-bottom: .4rem; padding: 0; font: 600 .95rem var(--rounded); }
+.swatch { position: relative; }
+.swatch input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.sw { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; width: 2.75rem; height: 2.75rem; padding: 4px; border-radius: 12px; background: var(--s0); cursor: pointer; }
+.sw i { border-radius: 4px; }
+.sw i:nth-child(1) { background: var(--s1); } .sw i:nth-child(2) { background: var(--s2); }
+.sw i:nth-child(3) { background: var(--s3); } .sw i:nth-child(4) { background: var(--s4); }
+.swatch input:checked + .sw { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink); }
+.swatch input:focus-visible + .sw { box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--ink); }
+.no-js .palettes, .no-js .board-status { display: none; }
+
+/* ---------- режимы ---------- */
+.modes { padding-block: 5rem; background: var(--surface); transition: background-color .45s ease; }
+.rules { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; }
+.rule h3 { margin-top: 1rem; }
+.rule p { margin: 0; }
+.rule-tiles { display: inline-flex; align-items: center; gap: .4rem; margin: 0; padding: .45rem; border-radius: 1rem; background: var(--tray); direction: ltr; transition: background-color .45s ease; }
+.mt { display: grid; place-items: center; width: 3.25rem; aspect-ratio: 1; border-radius: .7rem; font: 800 1.35rem var(--rounded); }
+.mt-arrow { padding-inline: .3rem; font: 700 1.2rem var(--rounded); color: var(--bg); }
+
+/* ---------- секции со скриншотами ---------- */
+.feature { padding-block: 5.5rem; }
+.feature-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 17rem); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.feature.flip .feature-grid { grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); }
+.feature.flip .feature-text { order: 2; }
+.feature-grid.two-shots { grid-template-columns: minmax(0, 1fr) minmax(0, 28rem); }
+.feature.flip .feature-grid.two-shots { grid-template-columns: minmax(0, 28rem) minmax(0, 1fr); }
+.feature-text { max-width: 34rem; }
+.feature-text h3:first-of-type { margin-top: 1.75rem; }
+.points { margin: 1.25rem 0 0; padding-inline-start: 1.2rem; }
+.points li { margin-bottom: .4rem; }
+.shot { margin: 0; }
+.shot img { width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(40, 30, 20, .18)) drop-shadow(0 2px 6px rgba(40, 30, 20, .08)); }
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
+.shots .shot:nth-child(2) { margin-top: 3rem; }
+
+/* ---------- везде ---------- */
+.everywhere { padding-block: 5rem; background: var(--surface); transition: background-color .45s ease; }
+.facts { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 2rem 2.5rem; }
+.facts svg { width: 28px; height: 28px; }
+.facts h3 { margin: .75rem 0 .3rem; font-size: 1.1rem; }
+.facts p { margin: 0; }
+
+/* ---------- приватность, Plus, вопросы, финал ---------- */
+.privacy-note, .plus, .faq, .final { padding-block: 5rem; }
+.compare { width: 100%; margin-top: 2rem; border-collapse: collapse; font-size: 1rem; }
+.compare th, .compare td { padding: .8rem .5rem; border-bottom: 1px solid var(--line); text-align: start; vertical-align: middle; }
+.compare thead th { font: 700 1rem var(--rounded); }
+.compare td { width: 8rem; text-align: center; }
+.compare thead th:not(:first-child) { text-align: center; }
+.compare tbody th { font-weight: 500; }
+.compare .yes { width: 20px; height: 20px; margin: 0 auto; }
+.compare .no { opacity: .55; }
+.plus-note { margin-top: 1.25rem; }
+.faq { background: var(--surface); transition: background-color .45s ease; }
+.faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; padding: 1.1rem 0; font: 600 1.1rem/1.35 var(--rounded); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 600 1.4rem/1 var(--rounded); transition: transform .2s var(--ease-out); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .answer { padding-bottom: 1.25rem; max-width: 40rem; }
+.final { text-align: center; }
+.final .narrow { display: flex; flex-direction: column; align-items: center; }
+.final p { max-width: 34rem; }
+.final .get { justify-content: center; }
+.final-link { font: 600 1rem var(--rounded); }
+
+/* ---------- подвал ---------- */
+.footer { padding-block: 3rem max(3rem, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 2rem; align-items: center; }
+.footer-brand { display: flex; align-items: center; gap: .8rem; margin: 0; line-height: 1.35; }
+.footer-brand img { width: 40px; height: 40px; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.footer-small { grid-column: 1 / -1; margin: 0; font-size: .9rem; }
+
+/* ---------- узкие экраны ---------- */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: var(--board);
+    grid-template-areas: "head" "board" "cta" "palettes";
+    justify-content: center;
+    min-height: 0;
+    padding-block: 1rem 3rem;
+  }
+  .hero-head, .hero-cta { max-width: none; }
+  .hero h1 { font-size: clamp(2rem, 8.4vw, 2.6rem); }
+  .lede { margin-bottom: 1.25rem; }
+  .palettes { gap: .4rem; }
+  .sw { width: 2.25rem; height: 2.25rem; border-radius: 10px; padding: 3px; }
+  .rules { grid-template-columns: 1fr; gap: 2rem; }
+  .feature { padding-block: 4rem; }
+  .feature-grid, .feature.flip .feature-grid, .feature-grid.two-shots, .feature.flip .feature-grid.two-shots { grid-template-columns: 1fr; }
+  .feature.flip .feature-text { order: 0; }
+  .feature-grid > .shot { max-width: 18rem; margin-inline: auto; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .compare td { width: 5.5rem; }
+}
+
+/* ---------- меньше движения ---------- */
+.rm .tile, .rm .board, .rm .cell { transition: none; }
+.rm .tile.new, .rm .tile.merged { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .tile, .board, .cell { transition: none; }
+  .tile.new, .tile.merged { animation: none; }
+}

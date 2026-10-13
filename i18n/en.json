@@ -1,0 +1,254 @@
+{
+  "lang": "en",
+  "path": "/",
+  "meta": {
+    "title": "Tilefold – a sliding tile puzzle for iPhone, iPad and Mac",
+    "description": "Slide the tiles, merge equal ones and reach the target. Three rule sets, five board sizes, a daily puzzle, etudes, hints and game review. Free, no ads.",
+    "ogTitle": "Tilefold – slide, merge, think",
+    "ogDescription": "A sliding tile puzzle with three rule sets, a daily puzzle and etudes. Free, no ads.",
+    "ogAlt": "A Tilefold board with merged tiles"
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "langNav": "Language and appearance",
+    "language": "Language",
+    "theme": {
+      "label": "Appearance",
+      "auto": "Auto",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "badgeAlt": "Download on the App Store",
+    "included": "Included",
+    "notIncluded": "Not included",
+    "boardLabel": "A playable 4 by 4 board. Arrow keys or a swipe slide the tiles.",
+    "boardHint": "Swipe or use the arrow keys",
+    "boardYou": "You’re playing",
+    "score": "Score"
+  },
+  "hero": {
+    "title": "Two twos make a four. After that, think.",
+    "lede": "Slide the tiles – they all move at once, and equal ones merge into one. The rules take a second to learn; the depth shows up when the board stops forgiving a careless move.",
+    "price": "Free, no ads"
+  },
+  "palettes": {
+    "label": "The game’s palettes",
+    "names": {
+      "classic": "Classic",
+      "sunset": "Sunset",
+      "neon": "Neon",
+      "pastel": "Pastel",
+      "graphite": "Graphite",
+      "moss": "Moss",
+      "indigo": "Indigo",
+      "cherry": "Cherry"
+    }
+  },
+  "modes": {
+    "title": "Three ways to merge",
+    "lede": "Each rule set changes what you look for on the board. The habits you build in one get in the way in the next.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "Powers of two",
+        "body": "The classic: two equal tiles become one, worth their sum."
+      },
+      {
+        "kind": "pow3",
+        "name": "Powers of three",
+        "body": "Three equal tiles become one. More room on the board, and every mistake costs more."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Neighbours in the sequence merge, not equal tiles: 3 and 5 make 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Etudes: a set position, a goal, a few moves",
+    "body": "Make 128 in four moves, or leave just five tiles on the board. No new tiles appear, so everything you need is already there – and every etude has an exact solution.",
+    "points": [
+      "84 etudes in seven chapters, from 3×3 to Fibonacci on 5×5",
+      "A hint shows the first move; after a miss, the game replays the solution",
+      "A free etude of the day for everyone, longer towards the end of the week"
+    ],
+    "alt": "An etude in Tilefold: make 128 in 4 moves"
+  },
+  "daily": {
+    "title": "One puzzle a day, the same for everyone",
+    "body": "One board for every player and a single attempt: no restart, no undo. Share your result as a card and keep your streak of solved days going.",
+    "duelTitle": "Challenge a friend",
+    "duelBody": "Send a link to your deal. Your friend plays the very same board and sees the score to beat – even without the game installed, right from the link.",
+    "alt": "The daily puzzle in Tilefold"
+  },
+  "help": {
+    "title": "Help when you’re stuck, and a look back when it’s over",
+    "hintTitle": "Hints",
+    "hintBody": "Stuck? Tap the light bulb and an arrow suggests a move. Three hints per game, free; the daily puzzle and challenges stay hint-free, since everyone plays them with a single attempt.",
+    "hintAlt": "A hint arrow on the Tilefold board",
+    "reviewTitle": "Game review",
+    "reviewBody": "After a game the app replays it and finds the move where it went wrong: what you played, and what would have been better. It all runs on your device.",
+    "reviewAlt": "Game review in Tilefold showing a better move"
+  },
+  "sizes": {
+    "title": "Five boards, eight palettes",
+    "body": "From a cramped 3×3, where every move counts, to a roomy 7×7. Each rule set and size keeps its own record and its own leaderboard.",
+    "palettes": "Five palettes come with the game, three more with Tilefold Plus. The numbers on every tile are picked for contrast, so the board stays readable in any of them.",
+    "sizesAlt": "A 7 by 7 board in Tilefold",
+    "palettesAlt": "Choosing a palette in Tilefold"
+  },
+  "everywhere": {
+    "title": "Wherever you play",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widgets",
+        "body": "Your board, your record and the daily puzzle on the Home Screen and Lock Screen."
+      },
+      {
+        "icon": "control",
+        "title": "Control Center",
+        "body": "A control opens today’s puzzle in one tap and shows when it’s solved."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Shortcuts",
+        "body": "Start a new game, open today’s puzzle or etude, or ask for your record – from Shortcuts and Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "A daily puzzle link opens right away – no need to install the game first."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "A board that fits the screen in any window, with a hardware keyboard if you like."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Plays on Macs with Apple silicon, with arrow keys and ⌘Z to undo."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Leaderboards for every mode and size, and achievements. Optional."
+      },
+      {
+        "icon": "offline",
+        "title": "Offline",
+        "body": "Everything, including hints and game review, works without a connection."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "No account, no ads, no tracking",
+    "body": "The game asks for nothing about you. Records and statistics go to your own iCloud. To fix crashes and see which screens are used, anonymous crash reports and usage statistics are sent to Google Firebase – no advertising identifier, nothing that identifies you.",
+    "link": "Read the privacy policy"
+  },
+  "plus": {
+    "title": "Free to play. Plus if you want more",
+    "lede": "The whole game is free. Tilefold Plus is a one-time purchase that adds etudes, palettes and tools for looking back at your games.",
+    "caption": "What comes free and what comes with Tilefold Plus",
+    "feature": "Feature",
+    "free": "Free",
+    "rows": [
+      {
+        "label": "All three rule sets and five board sizes",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "The daily puzzle and challenges",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Hints, three per game",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Etude of the day and two chapters of etudes",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Five more chapters of etudes",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Five palettes",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Moss, Indigo and Cherry palettes",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Game statistics",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Archive of past daily puzzles",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Game review",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Pay once, keep it forever: no subscription, and it works on all your devices with the same Apple Account."
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      {
+        "q": "Is Tilefold free?",
+        "a": "Yes. Every rule set, board size, the daily puzzle, challenges, hints and the etude of the day are free. Tilefold Plus is an optional one-time purchase."
+      },
+      {
+        "q": "Are there ads?",
+        "a": "No. There are no ads in the game, no advertising identifier and no tracking across apps and websites."
+      },
+      {
+        "q": "Which devices does it run on?",
+        "a": "iPhone and iPad with iOS and iPadOS 26 or later, and Macs with Apple silicon."
+      },
+      {
+        "q": "Will my records move to a new device?",
+        "a": "Yes. Records, statistics and daily puzzle results are kept in your iCloud and arrive on any device signed in to the same account."
+      },
+      {
+        "q": "I bought Plus – how do I get it on another device?",
+        "a": "Open Settings › Tilefold Plus and tap Restore Purchases, signed in with the same Apple Account."
+      },
+      {
+        "q": "Does it need an internet connection?",
+        "a": "No. Only Game Center and syncing through iCloud need a connection, and the game works fine without them."
+      }
+    ]
+  },
+  "final": {
+    "title": "Start with today’s puzzle",
+    "body": "One board, the same for everyone, and a single attempt. It takes a couple of minutes – and tomorrow there will be a new one.",
+    "daily": "Open today’s puzzle"
+  },
+  "footer": {
+    "tagline": "A sliding tile puzzle for iPhone, iPad and Mac.",
+    "navLabel": "Site",
+    "support": "Support",
+    "privacy": "Privacy Policy",
+    "press": "Press",
+    "daily": "Today’s puzzle",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, the Apple logo, iPhone, iPad, Mac and App Store are trademarks of Apple Inc., registered in the U.S. and other countries."
+  }
+}

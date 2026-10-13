@@ -1,0 +1,21 @@
+{
+  "_comment": "Палитры игры – из Tilefold/Appearance/Theme.swift: фон, поднос, клетки и цвет управления (светлый, тёмный) и плитки по уровням 2, 4, 8, … Плитки в тёмной теме те же. plus – палитра из Tilefold Plus.",
+  "palettes": [
+    { "id": "classic", "bg": ["#FAF8EF", "#141210"], "tray": ["#BBADA0", "#1E1C19"], "cell": ["#CCC0B3", "#2A2724"], "ink": ["#776E65", "#F5EFE6"],
+      "tiles": ["#EEE4DA", "#EDE0C8", "#F2B179", "#F59563", "#F67C5F", "#F65E3B", "#EDCF72", "#EDCC61", "#EDC850", "#EDC53F", "#EDC22E", "#ADB777", "#AAB766", "#A4B74F", "#A1B73F"] },
+    { "id": "sunset", "bg": ["#FDF6F0", "#160F0D"], "tray": ["#C9B4A6", "#241715"], "cell": ["#DCC8BB", "#33211E"], "ink": ["#8E4A3A", "#FBE7DA"],
+      "tiles": ["#FEDFB4", "#FFC98A", "#FFAC5E", "#FF8A5B", "#FF6B6B", "#F45B69", "#D1434E", "#B8323F", "#8E1F2C", "#7A1526", "#5E0E1E"] },
+    { "id": "neon", "bg": ["#F2F4F8", "#0E1014"], "tray": ["#B9C0CC", "#1A1D24"], "cell": ["#CDD3DC", "#252A33"], "ink": ["#2F5C7A", "#E6F0F7"],
+      "tiles": ["#33B5E5", "#0099CC", "#6C7BE0", "#AA66CC", "#C45BB0", "#E05A8A", "#F2757A", "#F79E6B", "#F5C563", "#D8D26A", "#A8CE72"] },
+    { "id": "pastel", "bg": ["#FCF6F8", "#14100F"], "tray": ["#D5C3CA", "#211A1E"], "cell": ["#E6D6DC", "#2E2429"], "ink": ["#8A4C68", "#F7E6EE"],
+      "tiles": ["#FBE4EC", "#F8CBDC", "#F0C2CF", "#E89AB8", "#DE7CA5", "#CE6394", "#B44E80", "#963C6B", "#742C53", "#5D2343", "#471B34"] },
+    { "id": "graphite", "bg": ["#F7F6F3", "#121211"], "tray": ["#C3BEB2", "#1D1D1B"], "cell": ["#D8D3C7", "#282825"], "ink": ["#565143", "#F3F1EA"],
+      "tiles": ["#F3F1EA", "#E4E0D4", "#CFC9B8", "#B3AC98", "#948C78", "#756E5C", "#565143", "#3B372E", "#2C2924", "#22201B", "#1A1815"] },
+    { "id": "moss", "plus": true, "bg": ["#F7F8F2", "#10120E"], "tray": ["#AFB5A0", "#1E231A"], "cell": ["#C3C8B6", "#2A3024"], "ink": ["#5A6151", "#E8EFE0"],
+      "tiles": ["#E9EDDF", "#DDE4CB", "#C6D6A8", "#AFC886", "#95B764", "#7BA548", "#629036", "#4E7A2C", "#3D6524", "#2F501C", "#223B15"] },
+    { "id": "indigo", "plus": true, "bg": ["#F4F5FA", "#0E0F16"], "tray": ["#A9AEC4", "#1A1C29"], "cell": ["#C0C4D6", "#252838"], "ink": ["#4A4F6B", "#E4E6F2"],
+      "tiles": ["#E6E8F4", "#D6D9EE", "#B6BCE4", "#949CD8", "#757ECC", "#5A62BE", "#474DA6", "#383D8A", "#2B2F6E", "#202353", "#17193B"] },
+    { "id": "cherry", "plus": true, "bg": ["#FBF4F4", "#150E0E"], "tray": ["#C2A5A5", "#2A1A1A"], "cell": ["#D6BCBC", "#382424"], "ink": ["#6B4444", "#F4E4E4"],
+      "tiles": ["#F2E2E2", "#EBCFCF", "#E0ADAD", "#D48989", "#C86666", "#BC4747", "#A63737", "#8C2C2C", "#732424", "#5A1C1C", "#421515"] }
+  ]
+}
