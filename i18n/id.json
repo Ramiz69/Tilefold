@@ -1,0 +1,254 @@
+{
+  "lang": "id",
+  "path": "/id/",
+  "meta": {
+    "title": "Tilefold – teka-teki geser ubin untuk iPhone, iPad, dan Mac",
+    "description": "Geser ubin, gabungkan yang sama, dan capai target. Tiga mode, lima ukuran papan, teka-teki harian, studi, petunjuk, dan analisis permainan. Gratis, tanpa iklan.",
+    "ogTitle": "Tilefold – geser, gabungkan, pikirkan",
+    "ogDescription": "Teka-teki geser ubin dengan tiga mode, teka-teki harian, dan studi. Gratis, tanpa iklan.",
+    "ogAlt": "Papan Tilefold dengan ubin yang sudah digabungkan"
+  },
+  "ui": {
+    "skip": "Langsung ke konten",
+    "langNav": "Bahasa dan tampilan",
+    "language": "Bahasa",
+    "theme": {
+      "label": "Skema warna",
+      "auto": "Otomatis",
+      "light": "Terang",
+      "dark": "Gelap"
+    },
+    "badgeAlt": "Unduh di App Store",
+    "included": "Termasuk",
+    "notIncluded": "Tidak termasuk",
+    "boardLabel": "Papan 4 kali 4 yang bisa dimainkan. Tombol panah atau usapan menggeser ubin.",
+    "boardHint": "Usap atau gunakan tombol panah",
+    "boardYou": "Anda sedang bermain",
+    "score": "Skor"
+  },
+  "hero": {
+    "title": "Dua tambah dua jadi empat. Setelah itu, berpikirlah.",
+    "lede": "Geser ubin – semuanya bergerak bersamaan, dan ubin yang sama bergabung menjadi satu. Aturannya dipahami dalam sedetik; kedalamannya baru terasa saat papan tak lagi memaafkan satu langkah ceroboh.",
+    "price": "Gratis, tanpa iklan"
+  },
+  "palettes": {
+    "label": "Palet dalam game",
+    "names": {
+      "classic": "Klasik",
+      "sunset": "Senja",
+      "neon": "Neon",
+      "pastel": "Pastel",
+      "graphite": "Grafit",
+      "moss": "Lumut",
+      "indigo": "Nila",
+      "cherry": "Ceri"
+    }
+  },
+  "modes": {
+    "title": "Tiga cara menggabungkan",
+    "lede": "Setiap mode mengubah apa yang Anda cari di papan. Kebiasaan dari satu mode justru menjebak di mode berikutnya.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "Pangkat 2",
+        "body": "Yang klasik: dua ubin yang sama menjadi satu, bernilai jumlah keduanya."
+      },
+      {
+        "kind": "pow3",
+        "name": "Pangkat 3",
+        "body": "Tiga ubin yang sama menjadi satu. Ruang di papan lebih lega, tetapi setiap kesalahan lebih mahal."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Yang bergabung adalah angka yang bersebelahan dalam deret, bukan yang sama: 3 dan 5 menjadi 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Studi: posisi siap, satu tugas, beberapa langkah",
+    "body": "Buat 128 dalam empat langkah, atau sisakan hanya lima ubin di papan. Tidak ada ubin baru, jadi semua yang Anda perlukan sudah ada di papan – dan setiap studi punya solusi pasti.",
+    "points": [
+      "84 studi dalam tujuh bab, dari 3×3 sampai Fibonacci di 5×5",
+      "Petunjuk menunjukkan langkah pertama; setelah gagal, game memperlihatkan solusinya",
+      "Studi hari ini gratis untuk semua orang, makin panjang menjelang akhir pekan"
+    ],
+    "alt": "Studi di Tilefold: buat 128 dalam 4 langkah"
+  },
+  "daily": {
+    "title": "Satu teka-teki sehari, sama untuk semua orang",
+    "body": "Satu papan untuk semua pemain dan satu kesempatan: tidak bisa mulai ulang, tidak bisa membatalkan langkah. Bagikan hasil Anda sebagai kartu dan jaga rentetan hari yang terpecahkan.",
+    "duelTitle": "Tantang teman",
+    "duelBody": "Kirim tautan ke papan Anda. Teman Anda memainkan papan yang sama persis dan melihat skor yang harus dikalahkan – langsung dari tautan, bahkan tanpa memasang game-nya.",
+    "alt": "Teka-teki harian di Tilefold"
+  },
+  "help": {
+    "title": "Bantuan saat buntu, dan tinjauan setelah selesai",
+    "hintTitle": "Petunjuk",
+    "hintBody": "Buntu? Ketuk bola lampu, dan sebuah panah menyarankan satu langkah. Tiga petunjuk per permainan, gratis; teka-teki harian dan duel tetap tanpa petunjuk, karena semua orang memainkannya dengan satu kesempatan.",
+    "hintAlt": "Panah petunjuk di papan Tilefold",
+    "reviewTitle": "Analisis permainan",
+    "reviewBody": "Setelah permainan selesai, aplikasi memutarnya ulang dan menemukan langkah saat semuanya mulai salah: apa yang Anda mainkan, dan apa yang sebaiknya dimainkan. Semuanya berjalan di perangkat Anda.",
+    "reviewAlt": "Analisis permainan di Tilefold menunjukkan langkah yang lebih baik"
+  },
+  "sizes": {
+    "title": "Lima papan, delapan palet",
+    "body": "Dari 3×3 yang sempit, tempat setiap langkah berarti, sampai 7×7 yang lega. Setiap mode dan ukuran punya rekor dan papan peringkatnya sendiri.",
+    "palettes": "Lima palet tersedia di game, tiga lagi di Tilefold Plus. Angka di setiap ubin dipilih agar kontras, jadi papan tetap mudah dibaca di palet mana pun.",
+    "sizesAlt": "Papan 7 kali 7 di Tilefold",
+    "palettesAlt": "Memilih palet di Tilefold"
+  },
+  "everywhere": {
+    "title": "Di mana pun Anda bermain",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widget",
+        "body": "Papan, rekor, dan teka-teki harian Anda di Layar Utama dan Layar Terkunci."
+      },
+      {
+        "icon": "control",
+        "title": "Pusat Kontrol",
+        "body": "Satu kontrol membuka teka-teki hari ini dengan sekali ketuk dan menunjukkan kapan teka-teki itu terpecahkan."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Pintasan",
+        "body": "Mulai permainan baru, buka teka-teki atau studi hari ini, atau tanyakan rekor Anda – lewat Pintasan dan Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Tautan teka-teki harian langsung terbuka – tidak perlu memasang game-nya dulu."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Papan yang pas dengan layar di jendela apa pun, juga dengan papan ketik fisik jika Anda mau."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Bisa dimainkan di Mac dengan Apple silicon, dengan tombol panah dan ⌘Z untuk membatalkan."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Papan peringkat untuk setiap mode dan ukuran, serta pencapaian. Opsional."
+      },
+      {
+        "icon": "offline",
+        "title": "Offline",
+        "body": "Semuanya, termasuk petunjuk dan analisis permainan, berfungsi tanpa koneksi."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Tanpa akun, tanpa iklan, tanpa pelacakan",
+    "body": "Game ini tidak meminta apa pun tentang Anda. Rekor dan statistik tersimpan di iCloud Anda sendiri. Untuk memperbaiki crash dan melihat layar mana yang dipakai, laporan crash dan statistik penggunaan anonim dikirim ke Google Firebase – tanpa pengenal iklan, tanpa apa pun yang mengidentifikasi Anda.",
+    "link": "Baca kebijakan privasi"
+  },
+  "plus": {
+    "title": "Gratis dimainkan. Plus jika ingin lebih",
+    "lede": "Seluruh game gratis. Tilefold Plus adalah pembelian satu kali yang menambahkan studi, palet, dan alat untuk meninjau kembali permainan Anda.",
+    "caption": "Apa yang gratis dan apa yang termasuk dalam Tilefold Plus",
+    "feature": "Fitur",
+    "free": "Gratis",
+    "rows": [
+      {
+        "label": "Ketiga mode dan lima ukuran papan",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Teka-teki harian dan duel",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Petunjuk, tiga per permainan",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Studi hari ini dan dua bab studi",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Lima bab studi lainnya",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Lima palet",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Palet Lumut, Nila, dan Ceri",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Statistik permainan",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Arsip teka-teki harian sebelumnya",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Analisis permainan",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Bayar sekali, milik Anda selamanya: tanpa langganan, dan berlaku di semua perangkat Anda dengan Akun Apple yang sama."
+  },
+  "faq": {
+    "title": "Pertanyaan",
+    "items": [
+      {
+        "q": "Apakah Tilefold gratis?",
+        "a": "Ya. Semua mode, ukuran papan, teka-teki harian, duel, petunjuk, dan studi hari ini gratis. Tilefold Plus adalah pembelian satu kali yang opsional."
+      },
+      {
+        "q": "Apakah ada iklan?",
+        "a": "Tidak. Tidak ada iklan di game, tidak ada pengenal iklan, dan tidak ada pelacakan di berbagai app dan situs web."
+      },
+      {
+        "q": "Di perangkat apa saja game ini berjalan?",
+        "a": "iPhone dan iPad dengan iOS dan iPadOS 26 atau lebih baru, serta Mac dengan Apple silicon."
+      },
+      {
+        "q": "Apakah rekor saya pindah ke perangkat baru?",
+        "a": "Ya. Rekor, statistik, dan hasil teka-teki harian disimpan di iCloud Anda dan muncul di perangkat apa pun yang masuk dengan akun yang sama."
+      },
+      {
+        "q": "Saya sudah membeli Plus – bagaimana memakainya di perangkat lain?",
+        "a": "Buka Pengaturan › Tilefold Plus dan ketuk Pulihkan pembelian, dengan Akun Apple yang sama."
+      },
+      {
+        "q": "Apakah perlu koneksi internet?",
+        "a": "Tidak. Hanya Game Center dan sinkronisasi lewat iCloud yang memerlukan koneksi, dan game tetap berjalan baik tanpa keduanya."
+      }
+    ]
+  },
+  "final": {
+    "title": "Mulai dengan teka-teki hari ini",
+    "body": "Satu papan, sama untuk semua orang, dan satu kesempatan. Cukup beberapa menit – dan besok ada yang baru.",
+    "daily": "Buka teka-teki hari ini"
+  },
+  "footer": {
+    "tagline": "Teka-teki geser ubin untuk iPhone, iPad, dan Mac.",
+    "navLabel": "Situs",
+    "support": "Dukungan",
+    "privacy": "Kebijakan Privasi",
+    "press": "Pers",
+    "daily": "Teka-teki hari ini",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, logo Apple, iPhone, iPad, Mac, dan App Store adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain."
+  }
+}

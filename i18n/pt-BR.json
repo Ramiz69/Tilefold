@@ -1,0 +1,254 @@
+{
+  "lang": "pt-BR",
+  "path": "/pt-br/",
+  "meta": {
+    "title": "Tilefold – um quebra-cabeça de peças deslizantes para iPhone, iPad e Mac",
+    "description": "Deslize as peças, junte as iguais e chegue ao objetivo. Três modos, cinco tamanhos de tabuleiro, puzzle diário, estudos, dicas e análise da partida. Grátis, sem anúncios.",
+    "ogTitle": "Tilefold – deslize, junte, pense",
+    "ogDescription": "Um quebra-cabeça de peças deslizantes com três modos, um puzzle diário e estudos. Grátis, sem anúncios.",
+    "ogAlt": "Um tabuleiro do Tilefold com peças juntadas"
+  },
+  "ui": {
+    "skip": "Pular para o conteúdo",
+    "langNav": "Idioma e aparência",
+    "language": "Idioma",
+    "theme": {
+      "label": "Esquema de cores",
+      "auto": "Automático",
+      "light": "Claro",
+      "dark": "Escuro"
+    },
+    "badgeAlt": "Baixar na App Store",
+    "included": "Incluído",
+    "notIncluded": "Não incluído",
+    "boardLabel": "Um tabuleiro 4 por 4 jogável. As setas do teclado ou um gesto de deslizar movem as peças.",
+    "boardHint": "Deslize ou use as setas",
+    "boardYou": "Você está jogando",
+    "score": "Pontos"
+  },
+  "hero": {
+    "title": "Dois 2 viram um 4. Daí em diante, pense.",
+    "lede": "Deslize as peças – todas se movem ao mesmo tempo, e as iguais viram uma só. As regras se aprendem em um segundo; a profundidade aparece quando o tabuleiro deixa de perdoar uma jogada descuidada.",
+    "price": "Grátis, sem anúncios"
+  },
+  "palettes": {
+    "label": "As paletas do jogo",
+    "names": {
+      "classic": "Clássica",
+      "sunset": "Pôr do sol",
+      "neon": "Neon",
+      "pastel": "Pastel",
+      "graphite": "Grafite",
+      "moss": "Musgo",
+      "indigo": "Índigo",
+      "cherry": "Cereja"
+    }
+  },
+  "modes": {
+    "title": "Três jeitos de juntar",
+    "lede": "Cada modo muda o que você procura no tabuleiro. Os hábitos de um atrapalham no outro.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "Potências de 2",
+        "body": "O clássico: duas peças iguais viram uma só, que vale a soma delas."
+      },
+      {
+        "kind": "pow3",
+        "name": "Potências de 3",
+        "body": "Três peças iguais viram uma. Mais espaço no tabuleiro, e cada erro custa mais caro."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Juntam-se os números vizinhos da sequência, não os iguais: 3 e 5 formam 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Estudos: uma posição pronta, um objetivo e poucas jogadas",
+    "body": "Forme 128 em quatro jogadas ou deixe só cinco peças no tabuleiro. Não aparecem peças novas, então tudo de que você precisa já está lá – e todo estudo tem uma solução exata.",
+    "points": [
+      "84 estudos em sete capítulos, de 3×3 a Fibonacci em 5×5",
+      "Uma dica mostra a primeira jogada; depois de um erro, o jogo mostra a solução",
+      "Um estudo do dia grátis para todo mundo, mais longo perto do fim da semana"
+    ],
+    "alt": "Um estudo no Tilefold: forme 128 em 4 jogadas"
+  },
+  "daily": {
+    "title": "Um puzzle por dia, o mesmo para todo mundo",
+    "body": "Um tabuleiro para todos e uma tentativa só: sem recomeçar, sem desfazer. Compartilhe o resultado como cartão e mantenha sua sequência de dias resolvidos.",
+    "duelTitle": "Desafie um amigo",
+    "duelBody": "Mande um link para a sua distribuição. Seu amigo joga exatamente o mesmo tabuleiro e vê a pontuação que precisa superar – mesmo sem o jogo instalado, direto pelo link.",
+    "alt": "O puzzle diário no Tilefold"
+  },
+  "help": {
+    "title": "Ajuda quando você trava, e um olhar para trás quando acaba",
+    "hintTitle": "Dicas",
+    "hintBody": "Travou? Toque na lâmpada e uma seta sugere uma jogada. Três dicas por partida, grátis; o puzzle diário e os duelos ficam sem dicas, porque todo mundo joga com uma tentativa só.",
+    "hintAlt": "Uma seta de dica no tabuleiro do Tilefold",
+    "reviewTitle": "Análise da partida",
+    "reviewBody": "Depois da partida, o app a repete e encontra a jogada em que tudo desandou: o que você jogou e o que teria sido melhor. Tudo é calculado no seu dispositivo.",
+    "reviewAlt": "Análise da partida no Tilefold mostrando uma jogada melhor"
+  },
+  "sizes": {
+    "title": "Cinco tabuleiros, oito paletas",
+    "body": "De um apertado 3×3, onde cada jogada conta, a um espaçoso 7×7. Cada modo e tamanho tem o próprio recorde e a própria classificação.",
+    "palettes": "Cinco paletas vêm com o jogo, e mais três com o Tilefold Plus. Os números de cada peça foram escolhidos pelo contraste, então o tabuleiro fica legível em qualquer uma delas.",
+    "sizesAlt": "Um tabuleiro 7 por 7 no Tilefold",
+    "palettesAlt": "Escolha de paleta no Tilefold"
+  },
+  "everywhere": {
+    "title": "Onde quer que você jogue",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widgets",
+        "body": "Seu tabuleiro, seu recorde e o puzzle diário na Tela de Início e na Tela Bloqueada."
+      },
+      {
+        "icon": "control",
+        "title": "Central de Controle",
+        "body": "Um controle abre o puzzle de hoje com um toque e mostra se ele já foi resolvido."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Atalhos",
+        "body": "Comece uma partida, abra o puzzle ou o estudo de hoje ou pergunte seu recorde – pelos Atalhos e pela Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Um link do puzzle diário abre na hora – não precisa instalar o jogo antes."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Um tabuleiro que se ajusta à tela em qualquer janela, e com teclado físico, se você preferir."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Roda em Macs com Apple silicon, com as setas do teclado e ⌘Z para desfazer."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Classificações para cada modo e tamanho, e conquistas. Opcional."
+      },
+      {
+        "icon": "offline",
+        "title": "Offline",
+        "body": "Tudo, inclusive as dicas e a análise da partida, funciona sem conexão."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Sem conta, sem anúncios, sem rastreamento",
+    "body": "O jogo não pede nada sobre você. Recordes e estatísticas vão para o seu próprio iCloud. Para corrigir falhas e ver quais telas são usadas, relatórios anônimos de falhas e estatísticas de uso são enviados ao Google Firebase – sem identificador de publicidade, sem nada que identifique você.",
+    "link": "Leia a política de privacidade"
+  },
+  "plus": {
+    "title": "Grátis para jogar. Plus se quiser mais",
+    "lede": "O jogo inteiro é grátis. O Tilefold Plus é uma compra única que acrescenta estudos, paletas e ferramentas para rever suas partidas.",
+    "caption": "O que é grátis e o que vem com o Tilefold Plus",
+    "feature": "Recurso",
+    "free": "Grátis",
+    "rows": [
+      {
+        "label": "Os três modos e os cinco tamanhos de tabuleiro",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "O puzzle diário e os duelos",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Dicas, três por partida",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Estudo do dia e dois capítulos de estudos",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Mais cinco capítulos de estudos",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Cinco paletas",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Paletas Musgo, Índigo e Cereja",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Estatísticas das partidas",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Arquivo dos puzzles diários anteriores",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Análise da partida",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Pague uma vez e é seu para sempre: sem assinatura, e funciona em todos os seus dispositivos com a mesma Conta Apple."
+  },
+  "faq": {
+    "title": "Perguntas",
+    "items": [
+      {
+        "q": "O Tilefold é grátis?",
+        "a": "Sim. Todos os modos, tamanhos de tabuleiro, o puzzle diário, os duelos, as dicas e o estudo do dia são grátis. O Tilefold Plus é uma compra única opcional."
+      },
+      {
+        "q": "Tem anúncios?",
+        "a": "Não. O jogo não tem anúncios, nem identificador de publicidade, nem rastreamento entre apps e sites."
+      },
+      {
+        "q": "Em quais dispositivos ele funciona?",
+        "a": "iPhone e iPad com iOS e iPadOS 26 ou posterior, e Macs com Apple silicon."
+      },
+      {
+        "q": "Meus recordes passam para um dispositivo novo?",
+        "a": "Sim. Recordes, estatísticas e resultados do puzzle diário ficam no seu iCloud e chegam a qualquer dispositivo conectado à mesma conta."
+      },
+      {
+        "q": "Comprei o Plus – como uso em outro dispositivo?",
+        "a": "Abra Ajustes › Tilefold Plus e toque em “Restaurar compras”, com a mesma Conta Apple."
+      },
+      {
+        "q": "Precisa de internet?",
+        "a": "Não. Só o Game Center e a sincronização pelo iCloud precisam de conexão, e o jogo funciona muito bem sem eles."
+      }
+    ]
+  },
+  "final": {
+    "title": "Comece pelo puzzle de hoje",
+    "body": "Um tabuleiro, o mesmo para todo mundo, e uma tentativa só. Leva uns dois minutos – e amanhã tem um novo.",
+    "daily": "Abrir o puzzle de hoje"
+  },
+  "footer": {
+    "tagline": "Um quebra-cabeça de peças deslizantes para iPhone, iPad e Mac.",
+    "navLabel": "Site",
+    "support": "Suporte",
+    "privacy": "Política de Privacidade",
+    "press": "Imprensa",
+    "daily": "Puzzle de hoje",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, o logotipo da Apple, iPhone, iPad, Mac e App Store são marcas comerciais da Apple Inc., registradas nos EUA e em outros países."
+  }
+}

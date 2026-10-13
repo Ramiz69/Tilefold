@@ -1,0 +1,254 @@
+{
+  "lang": "vi",
+  "path": "/vi/",
+  "meta": {
+    "title": "Tilefold – trò chơi trượt ô cho iPhone, iPad và Mac",
+    "description": "Trượt các ô, ghép những ô giống nhau và chạm mục tiêu. Ba chế độ, năm kích thước bảng, câu đố hằng ngày, thế cờ, gợi ý và phân tích ván. Miễn phí, không quảng cáo.",
+    "ogTitle": "Tilefold – trượt, ghép, suy nghĩ",
+    "ogDescription": "Trò chơi trượt ô với ba chế độ, câu đố hằng ngày và thế cờ. Miễn phí, không quảng cáo.",
+    "ogAlt": "Bảng Tilefold với các ô đã ghép"
+  },
+  "ui": {
+    "skip": "Chuyển đến nội dung",
+    "langNav": "Ngôn ngữ và giao diện",
+    "language": "Ngôn ngữ",
+    "theme": {
+      "label": "Chế độ màu",
+      "auto": "Tự động",
+      "light": "Sáng",
+      "dark": "Tối"
+    },
+    "badgeAlt": "Tải về trên App Store",
+    "included": "Có",
+    "notIncluded": "Không có",
+    "boardLabel": "Bảng 4 x 4 có thể chơi. Phím mũi tên hoặc thao tác vuốt sẽ trượt các ô.",
+    "boardHint": "Vuốt hoặc dùng phím mũi tên",
+    "boardYou": "Bạn đang chơi",
+    "score": "Điểm"
+  },
+  "hero": {
+    "title": "Hai cộng hai thành bốn. Sau đó, hãy suy nghĩ.",
+    "lede": "Trượt các ô – tất cả cùng di chuyển một lúc, và những ô giống nhau gộp thành một. Luật chơi hiểu ngay trong một giây; chiều sâu đến sau, khi bảng không còn tha thứ cho một nước đi hớ.",
+    "price": "Miễn phí, không quảng cáo"
+  },
+  "palettes": {
+    "label": "Bảng màu của trò chơi",
+    "names": {
+      "classic": "Cổ điển",
+      "sunset": "Hoàng hôn",
+      "neon": "Neon",
+      "pastel": "Pastel",
+      "graphite": "Than chì",
+      "moss": "Rêu",
+      "indigo": "Chàm",
+      "cherry": "Anh đào"
+    }
+  },
+  "modes": {
+    "title": "Ba cách ghép",
+    "lede": "Mỗi chế độ thay đổi điều bạn tìm kiếm trên bảng. Thói quen hình thành ở chế độ này sẽ cản trở bạn ở chế độ tiếp theo.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "Lũy thừa 2",
+        "body": "Lối chơi cổ điển: hai ô giống nhau gộp thành một, có giá trị bằng tổng của chúng."
+      },
+      {
+        "kind": "pow3",
+        "name": "Lũy thừa 3",
+        "body": "Ba ô giống nhau gộp thành một. Bảng rộng chỗ hơn, nhưng mỗi sai lầm đắt hơn."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Các số liền kề trong dãy ghép lại chứ không phải các số bằng nhau: 3 và 5 thành 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Thế cờ: một thế bày sẵn, một nhiệm vụ, vài nước đi",
+    "body": "Ghép ra 128 trong bốn nước, hoặc chỉ để lại năm ô trên bảng. Không có ô mới xuất hiện, nên mọi thứ bạn cần đã có sẵn – và thế cờ nào cũng có lời giải chính xác.",
+    "points": [
+      "84 thế cờ trong bảy chương, từ 3×3 đến Fibonacci trên 5×5",
+      "Gợi ý cho biết nước đầu tiên; sau khi thất bại, trò chơi chiếu lại lời giải",
+      "Thế cờ hôm nay miễn phí cho mọi người, càng gần cuối tuần càng dài"
+    ],
+    "alt": "Một thế cờ trong Tilefold: ghép ra 128 trong 4 nước"
+  },
+  "daily": {
+    "title": "Mỗi ngày một câu đố, ai cũng như nhau",
+    "body": "Một bảng cho mọi người chơi và chỉ một lần thử: không chơi lại, không hoàn tác. Chia sẻ kết quả dưới dạng thẻ và giữ chuỗi ngày đã giải của bạn.",
+    "duelTitle": "Thách đấu bạn bè",
+    "duelBody": "Gửi đường liên kết tới ván của bạn. Bạn bè sẽ chơi đúng bảng đó và thấy số điểm cần vượt qua – mở thẳng từ liên kết, kể cả khi chưa cài trò chơi.",
+    "alt": "Câu đố hằng ngày trong Tilefold"
+  },
+  "help": {
+    "title": "Trợ giúp khi bí nước, nhìn lại khi ván kết thúc",
+    "hintTitle": "Gợi ý",
+    "hintBody": "Bí nước? Chạm vào bóng đèn và một mũi tên sẽ gợi ý nước đi. Ba gợi ý mỗi ván, miễn phí; câu đố hằng ngày và thách đấu không có gợi ý, vì ai cũng chơi chúng với chỉ một lần thử.",
+    "hintAlt": "Mũi tên gợi ý trên bảng Tilefold",
+    "reviewTitle": "Phân tích ván",
+    "reviewBody": "Sau mỗi ván, ứng dụng chơi lại ván đó và tìm ra nước đi khiến mọi thứ hỏng: bạn đã đi gì và lẽ ra nên đi gì. Tất cả chạy ngay trên thiết bị của bạn.",
+    "reviewAlt": "Phân tích ván trong Tilefold chỉ ra nước đi tốt hơn"
+  },
+  "sizes": {
+    "title": "Năm bảng, tám bảng màu",
+    "body": "Từ bảng 3×3 chật chội, nơi nước nào cũng quan trọng, đến bảng 7×7 rộng rãi. Mỗi chế độ và kích thước có kỷ lục và bảng xếp hạng riêng.",
+    "palettes": "Năm bảng màu có sẵn trong trò chơi, thêm ba bảng màu với Tilefold Plus. Chữ số trên mỗi ô được chọn để đủ tương phản, nên bảng luôn dễ đọc với bất kỳ bảng màu nào.",
+    "sizesAlt": "Bảng 7 x 7 trong Tilefold",
+    "palettesAlt": "Chọn bảng màu trong Tilefold"
+  },
+  "everywhere": {
+    "title": "Chơi ở đâu cũng được",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Tiện ích",
+        "body": "Bảng, kỷ lục và câu đố hằng ngày của bạn trên Màn hình chính và Màn hình khóa."
+      },
+      {
+        "icon": "control",
+        "title": "Trung tâm điều khiển",
+        "body": "Một điều khiển mở câu đố hôm nay chỉ với một chạm và cho biết khi nào bạn đã giải xong."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Phím tắt",
+        "body": "Bắt đầu ván mới, mở câu đố hoặc thế cờ hôm nay, hay hỏi kỷ lục của bạn – từ Phím tắt và Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Liên kết câu đố hằng ngày mở ra ngay – không cần cài trò chơi trước."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Bảng vừa khít màn hình trong mọi cửa sổ, chơi bằng bàn phím vật lý nếu bạn muốn."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Chơi trên máy Mac dùng Apple silicon, với phím mũi tên và ⌘Z để hoàn tác."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Bảng xếp hạng cho mọi chế độ và kích thước, cùng thành tích. Không bắt buộc."
+      },
+      {
+        "icon": "offline",
+        "title": "Ngoại tuyến",
+        "body": "Mọi thứ, kể cả gợi ý và phân tích ván, đều hoạt động khi không có kết nối."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Không tài khoản, không quảng cáo, không theo dõi",
+    "body": "Trò chơi không hỏi gì về bạn. Kỷ lục và thống kê được lưu trong iCloud của chính bạn. Để sửa lỗi văng ứng dụng và biết màn hình nào được dùng, báo cáo sự cố và thống kê sử dụng ẩn danh được gửi tới Google Firebase – không có mã định danh quảng cáo, không có gì nhận dạng được bạn.",
+    "link": "Đọc chính sách quyền riêng tư"
+  },
+  "plus": {
+    "title": "Chơi miễn phí. Plus nếu bạn muốn thêm",
+    "lede": "Toàn bộ trò chơi đều miễn phí. Tilefold Plus là gói mua một lần, thêm thế cờ, bảng màu và công cụ để nhìn lại các ván đã chơi.",
+    "caption": "Những gì miễn phí và những gì có trong Tilefold Plus",
+    "feature": "Tính năng",
+    "free": "Miễn phí",
+    "rows": [
+      {
+        "label": "Cả ba chế độ và năm kích thước bảng",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Câu đố hằng ngày và thách đấu",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Gợi ý, ba lần mỗi ván",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Thế cờ hôm nay và hai chương thế cờ",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Thêm năm chương thế cờ",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Năm bảng màu",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Bảng màu Rêu, Chàm và Anh đào",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Thống kê ván chơi",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Kho câu đố hằng ngày đã qua",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Phân tích ván",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Trả một lần, dùng mãi mãi: không gói đăng ký, và dùng được trên mọi thiết bị của bạn với cùng Tài khoản Apple."
+  },
+  "faq": {
+    "title": "Câu hỏi",
+    "items": [
+      {
+        "q": "Tilefold có miễn phí không?",
+        "a": "Có. Mọi chế độ, kích thước bảng, câu đố hằng ngày, thách đấu, gợi ý và thế cờ hôm nay đều miễn phí. Tilefold Plus là gói mua một lần không bắt buộc."
+      },
+      {
+        "q": "Có quảng cáo không?",
+        "a": "Không. Trò chơi không có quảng cáo, không có mã định danh quảng cáo và không theo dõi bạn qua các ứng dụng và trang web."
+      },
+      {
+        "q": "Trò chơi chạy trên những thiết bị nào?",
+        "a": "iPhone và iPad với iOS và iPadOS 26 trở lên, và máy Mac dùng Apple silicon."
+      },
+      {
+        "q": "Kỷ lục có chuyển sang thiết bị mới không?",
+        "a": "Có. Kỷ lục, thống kê và kết quả câu đố hằng ngày được lưu trong iCloud của bạn và có trên mọi thiết bị đăng nhập cùng tài khoản."
+      },
+      {
+        "q": "Tôi đã mua Plus – làm sao dùng trên thiết bị khác?",
+        "a": "Mở Cài đặt › Tilefold Plus và chạm Khôi phục giao dịch mua, khi đã đăng nhập cùng Tài khoản Apple."
+      },
+      {
+        "q": "Có cần kết nối internet không?",
+        "a": "Không. Chỉ Game Center và đồng bộ qua iCloud cần kết nối, và trò chơi vẫn chạy tốt khi không có chúng."
+      }
+    ]
+  },
+  "final": {
+    "title": "Bắt đầu với câu đố hôm nay",
+    "body": "Một bảng, ai cũng như nhau, và chỉ một lần thử. Chỉ mất vài phút – và ngày mai sẽ có câu đố mới.",
+    "daily": "Mở câu đố hôm nay"
+  },
+  "footer": {
+    "tagline": "Trò chơi trượt ô cho iPhone, iPad và Mac.",
+    "navLabel": "Trang web",
+    "support": "Hỗ trợ",
+    "privacy": "Chính sách quyền riêng tư",
+    "press": "Báo chí",
+    "daily": "Câu đố hôm nay",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, logo Apple, iPhone, iPad, Mac và App Store là nhãn hiệu của Apple Inc., đã được đăng ký tại Hoa Kỳ và các quốc gia khác."
+  }
+}

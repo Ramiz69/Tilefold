@@ -1,0 +1,254 @@
+{
+  "lang": "it",
+  "path": "/it/",
+  "meta": {
+    "title": "Tilefold – un puzzle a tessere scorrevoli per iPhone, iPad e Mac",
+    "description": "Fai scorrere le tessere, unisci quelle uguali e raggiungi l’obiettivo. Tre modalità, cinque dimensioni della griglia, sfida del giorno, studi, suggerimenti e analisi della partita. Gratis, senza pubblicità.",
+    "ogTitle": "Tilefold – scorri, unisci, pensa",
+    "ogDescription": "Un puzzle a tessere scorrevoli con tre modalità, una sfida del giorno e gli studi. Gratis, senza pubblicità.",
+    "ogAlt": "Una griglia di Tilefold con tessere unite"
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "langNav": "Lingua e aspetto",
+    "language": "Lingua",
+    "theme": {
+      "label": "Aspetto",
+      "auto": "Automatico",
+      "light": "Chiaro",
+      "dark": "Scuro"
+    },
+    "badgeAlt": "Scarica su App Store",
+    "included": "Incluso",
+    "notIncluded": "Non incluso",
+    "boardLabel": "Una griglia 4 per 4 su cui si può giocare. I tasti freccia o uno scorrimento spostano le tessere.",
+    "boardHint": "Scorri o usa i tasti freccia",
+    "boardYou": "Stai giocando tu",
+    "score": "Punteggio"
+  },
+  "hero": {
+    "title": "Due più due fa quattro. Poi bisogna pensare.",
+    "lede": "Fai scorrere le tessere – si muovono tutte insieme, e quelle uguali si uniscono in una. Le regole si imparano in un secondo; la profondità arriva quando la griglia smette di perdonare una mossa distratta.",
+    "price": "Gratis, senza pubblicità"
+  },
+  "palettes": {
+    "label": "Le palette del gioco",
+    "names": {
+      "classic": "Classico",
+      "sunset": "Tramonto",
+      "neon": "Neon",
+      "pastel": "Pastello",
+      "graphite": "Grafite",
+      "moss": "Muschio",
+      "indigo": "Indaco",
+      "cherry": "Ciliegia"
+    }
+  },
+  "modes": {
+    "title": "Tre modi di unire",
+    "lede": "Ogni modalità cambia quello che cerchi sulla griglia. Le abitudini prese in una ti ostacolano nella successiva.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "Potenze di 2",
+        "body": "Il classico: due tessere uguali diventano una sola, che vale la loro somma."
+      },
+      {
+        "kind": "pow3",
+        "name": "Potenze di 3",
+        "body": "Tre tessere uguali diventano una. Più spazio sulla griglia, e ogni errore costa di più."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Si uniscono i numeri vicini della serie, non quelli uguali: 3 e 5 fanno 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Studi: una posizione pronta, un obiettivo, poche mosse",
+    "body": "Crea 128 in quattro mosse o lascia solo cinque tessere sulla griglia. Non compaiono nuove tessere, quindi tutto ciò che ti serve è già lì – e ogni studio ha una soluzione esatta.",
+    "points": [
+      "84 studi in sette capitoli, da 3×3 a Fibonacci su 5×5",
+      "Un suggerimento mostra la prima mossa; dopo un errore, il gioco ti fa vedere la soluzione",
+      "Uno studio del giorno gratuito per tutti, più lungo verso la fine della settimana"
+    ],
+    "alt": "Uno studio in Tilefold: crea 128 in 4 mosse"
+  },
+  "daily": {
+    "title": "Una sfida al giorno, uguale per tutti",
+    "body": "Una griglia per tutti e un solo tentativo: niente nuova partita, niente annulla. Condividi il risultato come scheda e tieni viva la tua serie di giorni risolti.",
+    "duelTitle": "Un duello con un amico",
+    "duelBody": "Manda un link alla tua partita. Il tuo amico gioca esattamente la stessa griglia e vede il punteggio da battere – anche senza il gioco installato, direttamente dal link.",
+    "alt": "La sfida del giorno in Tilefold"
+  },
+  "help": {
+    "title": "Un aiuto quando sei bloccato, uno sguardo indietro quando hai finito",
+    "hintTitle": "Suggerimenti",
+    "hintBody": "Bloccato? Tocca la lampadina e una freccia ti suggerisce una mossa. Tre suggerimenti per partita, gratis; la sfida del giorno e i duelli restano senza suggerimenti, perché tutti li giocano con un solo tentativo.",
+    "hintAlt": "La freccia di un suggerimento sulla griglia di Tilefold",
+    "reviewTitle": "Analisi della partita",
+    "reviewBody": "A partita finita l’app la rigioca e trova la mossa in cui è andata storta: cosa hai giocato e cosa sarebbe stato meglio. Tutto avviene sul tuo dispositivo.",
+    "reviewAlt": "L’analisi della partita in Tilefold con una mossa migliore"
+  },
+  "sizes": {
+    "title": "Cinque griglie, otto palette",
+    "body": "Da una stretta 3×3, dove ogni mossa conta, a una spaziosa 7×7. Ogni modalità e dimensione ha il suo record e la sua classifica.",
+    "palettes": "Cinque palette sono incluse nel gioco, altre tre arrivano con Tilefold Plus. I numeri su ogni tessera sono scelti per il contrasto, così la griglia resta leggibile con ognuna.",
+    "sizesAlt": "Una griglia 7 per 7 in Tilefold",
+    "palettesAlt": "La scelta della palette in Tilefold"
+  },
+  "everywhere": {
+    "title": "Ovunque tu giochi",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widget",
+        "body": "La tua griglia, il tuo record e la sfida del giorno nella schermata Home e nella schermata di blocco."
+      },
+      {
+        "icon": "control",
+        "title": "Centro di Controllo",
+        "body": "Un controllo apre la sfida di oggi con un tocco e mostra se è già risolta."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Comandi rapidi",
+        "body": "Inizia una nuova partita, apri la sfida o lo studio di oggi o chiedi il tuo record – da Comandi rapidi e Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Il link alla sfida del giorno si apre subito – non serve installare prima il gioco."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Una griglia che si adatta allo schermo in qualsiasi finestra, anche con una tastiera fisica, se preferisci."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Funziona sui Mac con Apple silicon, con i tasti freccia e ⌘Z per annullare."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Classifiche per ogni modalità e dimensione, e obiettivi. Facoltativo."
+      },
+      {
+        "icon": "offline",
+        "title": "Offline",
+        "body": "Tutto, compresi i suggerimenti e l’analisi della partita, funziona senza connessione."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Niente account, niente pubblicità, niente tracciamento",
+    "body": "Il gioco non ti chiede nulla su di te. Record e statistiche vanno nel tuo iCloud. Per correggere i crash e capire quali schermate si usano, rapporti anonimi sui crash e statistiche d’uso vengono inviati a Google Firebase – senza identificatore pubblicitario e senza nulla che ti identifichi.",
+    "link": "Leggi l’informativa sulla privacy"
+  },
+  "plus": {
+    "title": "Si gioca gratis. Plus se vuoi di più",
+    "lede": "Tutto il gioco è gratuito. Tilefold Plus è un acquisto una tantum che aggiunge studi, palette e strumenti per riguardare le tue partite.",
+    "caption": "Cosa è gratuito e cosa arriva con Tilefold Plus",
+    "feature": "Funzione",
+    "free": "Gratis",
+    "rows": [
+      {
+        "label": "Tutte e tre le modalità e le cinque dimensioni della griglia",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "La sfida del giorno e i duelli",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Suggerimenti, tre per partita",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Studio del giorno e due capitoli di studi",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Altri cinque capitoli di studi",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Cinque palette",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Palette Muschio, Indaco e Ciliegia",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Statistiche delle partite",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Archivio delle sfide passate",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Analisi della partita",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Paghi una volta e resta tuo per sempre: nessun abbonamento, e funziona su tutti i tuoi dispositivi con lo stesso Account Apple."
+  },
+  "faq": {
+    "title": "Domande",
+    "items": [
+      {
+        "q": "Tilefold è gratis?",
+        "a": "Sì. Tutte le modalità, le dimensioni della griglia, la sfida del giorno, i duelli, i suggerimenti e lo studio del giorno sono gratuiti. Tilefold Plus è un acquisto una tantum facoltativo."
+      },
+      {
+        "q": "Ci sono pubblicità?",
+        "a": "No. Nel gioco non ci sono pubblicità, né identificatore pubblicitario, né tracciamento tra app e siti web."
+      },
+      {
+        "q": "Su quali dispositivi funziona?",
+        "a": "Su iPhone e iPad con iOS e iPadOS 26 o versioni successive, e sui Mac con Apple silicon."
+      },
+      {
+        "q": "I miei record passeranno a un nuovo dispositivo?",
+        "a": "Sì. Record, statistiche e risultati delle sfide del giorno restano nel tuo iCloud e arrivano su qualsiasi dispositivo collegato allo stesso account."
+      },
+      {
+        "q": "Ho acquistato Plus: come lo attivo su un altro dispositivo?",
+        "a": "Apri Impostazioni › Tilefold Plus e tocca «Ripristina acquisti», con lo stesso Account Apple."
+      },
+      {
+        "q": "Serve una connessione a internet?",
+        "a": "No. La connessione serve solo a Game Center e alla sincronizzazione tramite iCloud, e il gioco funziona benissimo anche senza."
+      }
+    ]
+  },
+  "final": {
+    "title": "Inizia dalla sfida di oggi",
+    "body": "Una griglia, uguale per tutti, e un solo tentativo. Bastano un paio di minuti – e domani ce ne sarà una nuova.",
+    "daily": "Apri la sfida di oggi"
+  },
+  "footer": {
+    "tagline": "Un puzzle a tessere scorrevoli per iPhone, iPad e Mac.",
+    "navLabel": "Sito",
+    "support": "Supporto",
+    "privacy": "Informativa sulla privacy",
+    "press": "Stampa",
+    "daily": "La sfida di oggi",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, il logo Apple, iPhone, iPad, Mac e App Store sono marchi di Apple Inc., registrati negli Stati Uniti e in altri Paesi."
+  }
+}

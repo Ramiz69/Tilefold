@@ -17,8 +17,13 @@ const I18N = join(ROOT, 'i18n');
 const load = code => JSON.parse(readFileSync(join(I18N, `${code}.json`), 'utf8'));
 const en = load('en');
 
-// Values that are data, not copy: they must match en.json exactly.
-const SAME = new Set(['jsonld.proOffer.price', 'jsonld.proOffer.priceCurrency', 'jsonld.proOffer.name']);
+// Checks for Tilefold (adapted from snowwall.app).
+// Values that are data, not copy: they must match en.json exactly. List positions are ignored
+// (`modes.items.kind` covers every item).
+const SAME_KEYS = new Set(['modes.items.kind', 'everywhere.facts.icon']);
+const SAME = { has: p => SAME_KEYS.has(p.replace(/\[\d+\]/g, '').replace(/\.\d+(?=\.|$)/g, '')) };
+// Names that stay as they are in every language: Apple's products and the game's own.
+const BRANDS = /^(Game Center|App Clip|Tilefold Plus|Tilefold|iPad|iPhone|Mac|Siri)$/;
 // Per-language values, checked separately.
 // badgeLang names the App Store badge in src/assets; the build falls back to English without one.
 const OWN = new Set(['lang', 'path', 'badgeLang']);
@@ -69,7 +74,7 @@ for (const code of codes) {
   if (t.path !== path) problems.push(`path: should be "${path}"`);
   const untranslated = [];
   (function walk(a, b, p) {
-    if (typeof a === 'string' && a === b && /[a-z]{4,}\s+[a-z]{3,}/i.test(a) && !SAME.has(p) && !OWN.has(p)) untranslated.push(p);
+    if (typeof a === 'string' && a === b && /[a-z]{4,}\s+[a-z]{3,}/i.test(a) && !BRANDS.test(a) && !SAME.has(p) && !OWN.has(p)) untranslated.push(p);
     else if (a && typeof a === 'object') for (const k of Object.keys(a)) if (b && k in b) walk(a[k], b[k], p ? `${p}.${k}` : k);
   })(en, t, '');
   if (untranslated.length) problems.push(`still English: ${untranslated.slice(0, 8).join(', ')}${untranslated.length > 8 ? ` and ${untranslated.length - 8} more` : ''}`);

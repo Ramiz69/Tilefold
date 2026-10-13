@@ -1,0 +1,254 @@
+{
+  "lang": "zh-Hans",
+  "path": "/zh-hans/",
+  "meta": {
+    "title": "Tilefold：适用于 iPhone、iPad 和 Mac 的滑动方块谜题",
+    "description": "滑动方块，合并相同的数，达成目标。三种模式、五种棋盘尺寸、每日谜题、残局、提示和对局复盘。免费，无广告。",
+    "ogTitle": "Tilefold：滑动、合并、思考",
+    "ogDescription": "一款滑动方块谜题，有三种模式、每日谜题和残局。免费，无广告。",
+    "ogAlt": "方块已经合并的 Tilefold 棋盘"
+  },
+  "ui": {
+    "skip": "跳至内容",
+    "langNav": "语言与外观",
+    "language": "语言",
+    "theme": {
+      "label": "外观",
+      "auto": "自动",
+      "light": "浅色",
+      "dark": "深色"
+    },
+    "badgeAlt": "在 App Store 下载",
+    "included": "包含",
+    "notIncluded": "不包含",
+    "boardLabel": "可以试玩的 4×4 棋盘。用方向键或轻扫来滑动方块。",
+    "boardHint": "轻扫或使用方向键",
+    "boardYou": "正在试玩",
+    "score": "分数"
+  },
+  "hero": {
+    "title": "两个 2 合成 4。接下来，就要动脑了。",
+    "lede": "滑动方块，所有方块会一起移动，相同的方块合成一个。规则一秒就懂；当棋盘不再容许一步随意的走法时，深度才会显现。",
+    "price": "免费，无广告"
+  },
+  "palettes": {
+    "label": "游戏的调色板",
+    "names": {
+      "classic": "经典",
+      "sunset": "日落",
+      "neon": "霓虹",
+      "pastel": "粉彩",
+      "graphite": "石墨",
+      "moss": "苔藓",
+      "indigo": "靛蓝",
+      "cherry": "樱桃"
+    }
+  },
+  "modes": {
+    "title": "三种合并方式",
+    "lede": "每种模式都会改变你在棋盘上寻找的东西。在一种模式里养成的习惯，到了下一种模式反而会碍事。",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "2 的幂",
+        "body": "经典玩法：两个相同的方块合成一个，数值是两者之和。"
+      },
+      {
+        "kind": "pow3",
+        "name": "3 的幂",
+        "body": "三个相同的方块合成一个。棋盘空间更大，每次失误的代价也更高。"
+      },
+      {
+        "kind": "fib",
+        "name": "斐波那契",
+        "body": "合并的不是相同的数，而是数列中相邻的数：3 和 5 合成 8。"
+      }
+    ]
+  },
+  "etudes": {
+    "title": "残局：给定的局面、一个目标、几步棋",
+    "body": "4 步合成 128，或者只在棋盘上留下 5 个方块。不会出现新方块，需要的一切都已经在棋盘上——每道残局都有确定的解法。",
+    "points": [
+      "七章共 84 道残局，从 3×3 到 5×5 的斐波那契",
+      "提示会给出第一步；失败后，游戏会演示解法",
+      "人人免费的每日残局，越接近周末步数越多"
+    ],
+    "alt": "Tilefold 残局：4 步合成 128"
+  },
+  "daily": {
+    "title": "每天一道谜题，所有人都一样",
+    "body": "所有人同一个棋盘，只有一次机会：不能重来，也不能撤销。成绩可以生成卡片分享，连续解题的天数也会一天天累积。",
+    "duelTitle": "向朋友发起对决",
+    "duelBody": "把你这一局的链接发给朋友。对方会在完全相同的棋盘上挑战你的分数——即使没有安装游戏，也能直接从链接打开。",
+    "alt": "Tilefold 的每日谜题"
+  },
+  "help": {
+    "title": "卡住时有提示，结束后能复盘",
+    "hintTitle": "提示",
+    "hintBody": "卡住了？轻点灯泡，箭头会提示一步走法。每局三次提示，免费；每日谜题和对决没有提示，因为所有人都只有一次机会。",
+    "hintAlt": "Tilefold 棋盘上的提示箭头",
+    "reviewTitle": "对局复盘",
+    "reviewBody": "对局结束后，App 会重放整局，找出出错的那一步：你走了什么，以及怎样走会更好。全部计算都在你的设备上完成。",
+    "reviewAlt": "Tilefold 对局复盘显示更好的走法"
+  },
+  "sizes": {
+    "title": "五种棋盘，八款调色板",
+    "body": "从每一步都很关键的局促 3×3，到宽敞的 7×7。每种模式和尺寸都有各自的最高分和排行榜。",
+    "palettes": "游戏自带 5 款调色板，Tilefold Plus 再加 3 款。方块上数字的颜色都按对比度挑选，无论用哪款调色板，棋盘都清晰易读。",
+    "sizesAlt": "Tilefold 的 7×7 棋盘",
+    "palettesAlt": "在 Tilefold 中选择调色板"
+  },
+  "everywhere": {
+    "title": "无论在哪里玩",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "小组件",
+        "body": "在主屏幕和锁定屏幕上查看你的棋盘、最高分和每日谜题。"
+      },
+      {
+        "icon": "control",
+        "title": "控制中心",
+        "body": "轻点一下控制，就能打开今天的谜题，还能看到是否已经完成。"
+      },
+      {
+        "icon": "shortcuts",
+        "title": "快捷指令",
+        "body": "开始新游戏、打开今天的谜题或每日残局、查询最高分——在快捷指令和 Siri 中都能做到。"
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "每日谜题的链接会立即打开，无需先安装游戏。"
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "无论窗口大小，棋盘都能适应屏幕；喜欢的话，也可以用实体键盘。"
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "可在搭载 Apple silicon 的 Mac 上玩，用方向键操作，⌘Z 撤销。"
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "每种模式和尺寸都有排行榜，还有成就。用不用由你决定。"
+      },
+      {
+        "icon": "offline",
+        "title": "离线",
+        "body": "包括提示和对局复盘在内，所有功能都无需联网。"
+      }
+    ]
+  },
+  "privacy": {
+    "title": "无需账户，没有广告，没有跟踪",
+    "body": "游戏不会询问任何关于你的信息。最高分和统计数据保存在你自己的 iCloud 中。为了修复崩溃、了解哪些界面有人使用，游戏会向 Google Firebase 发送匿名的崩溃报告和使用统计——不含广告标识符，也不含任何能识别你的信息。",
+    "link": "阅读隐私政策"
+  },
+  "plus": {
+    "title": "免费畅玩，想要更多就选 Plus",
+    "lede": "整个游戏都是免费的。Tilefold Plus 是一次性购买，增加残局、调色板，以及回顾对局的工具。",
+    "caption": "免费内容与 Tilefold Plus 内容",
+    "feature": "功能",
+    "free": "免费",
+    "rows": [
+      {
+        "label": "全部三种模式和五种棋盘尺寸",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "每日谜题和对决",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "提示，每局三次",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "每日残局和两章残局",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "另外五章残局",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "5 款调色板",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "苔藓、靛蓝和樱桃调色板",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "对局统计",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "往日谜题存档",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "对局复盘",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "一次购买，永久使用：不是订阅，在登录同一 Apple 账户的所有设备上都能用。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "q": "Tilefold 免费吗？",
+        "a": "是的。所有模式、棋盘尺寸、每日谜题、对决、提示和每日残局都是免费的。Tilefold Plus 是可选的一次性购买。"
+      },
+      {
+        "q": "有广告吗？",
+        "a": "没有。游戏中没有广告，不使用广告标识符，也不会跨 App 和网站跟踪你。"
+      },
+      {
+        "q": "支持哪些设备？",
+        "a": "运行 iOS 26 或更高版本的 iPhone、运行 iPadOS 26 或更高版本的 iPad，以及搭载 Apple silicon 的 Mac。"
+      },
+      {
+        "q": "换新设备后，最高分会转移过去吗？",
+        "a": "会。最高分、统计数据和每日谜题成绩都保存在你的 iCloud 中，会出现在登录同一账户的任何设备上。"
+      },
+      {
+        "q": "我买了 Plus，怎么在另一台设备上使用？",
+        "a": "使用同一 Apple 账户登录，打开“设置”›“Tilefold Plus”，然后轻点“恢复购买”。"
+      },
+      {
+        "q": "需要联网吗？",
+        "a": "不需要。只有 Game Center 和 iCloud 同步需要联网，没有它们，游戏也能正常玩。"
+      }
+    ]
+  },
+  "final": {
+    "title": "从今天的谜题开始",
+    "body": "一个棋盘，所有人都一样，只有一次机会。只需几分钟——明天还会有新的一道。",
+    "daily": "打开今天的谜题"
+  },
+  "footer": {
+    "tagline": "适用于 iPhone、iPad 和 Mac 的滑动方块谜题。",
+    "navLabel": "网站",
+    "support": "支持",
+    "privacy": "隐私政策",
+    "press": "媒体",
+    "daily": "今天的谜题",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple、Apple 标志、iPhone、iPad、Mac 和 App Store 是 Apple Inc. 在美国及其他国家和地区注册的商标。"
+  }
+}

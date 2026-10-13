@@ -1,0 +1,254 @@
+{
+  "lang": "tr",
+  "path": "/tr/",
+  "meta": {
+    "title": "Tilefold – iPhone, iPad ve Mac için karo kaydırma bulmacası",
+    "description": "Karoları kaydırın, aynı olanları birleştirin ve hedefe ulaşın. Üç mod, beş tahta boyutu, günün bulmacası, etütler, ipuçları ve oyun analizi. Ücretsiz, reklamsız.",
+    "ogTitle": "Tilefold – kaydır, birleştir, düşün",
+    "ogDescription": "Üç modu, günün bulmacası ve etütleriyle bir karo kaydırma bulmacası. Ücretsiz, reklamsız.",
+    "ogAlt": "Birleşmiş karolarla bir Tilefold tahtası"
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "langNav": "Dil ve görünüm",
+    "language": "Dil",
+    "theme": {
+      "label": "Renk düzeni",
+      "auto": "Otomatik",
+      "light": "Açık",
+      "dark": "Koyu"
+    },
+    "badgeAlt": "App Store’dan İndirin",
+    "included": "Dahil",
+    "notIncluded": "Dahil değil",
+    "boardLabel": "Oynanabilir 4’e 4 bir tahta. Karolar ok tuşlarıyla ya da parmağınızı kaydırarak hareket eder.",
+    "boardHint": "Kaydırın ya da ok tuşlarını kullanın",
+    "boardYou": "Siz oynuyorsunuz",
+    "score": "Skor"
+  },
+  "hero": {
+    "title": "İki ikiden bir dört olur. Gerisi düşünmek.",
+    "lede": "Karoları kaydırın – hepsi birlikte hareket eder, aynı olanlar tek karoda birleşir. Kurallar bir saniyede anlaşılır; derinlik, tahta dikkatsiz bir hamleyi affetmemeye başladığında ortaya çıkar.",
+    "price": "Ücretsiz, reklamsız"
+  },
+  "palettes": {
+    "label": "Oyunun paletleri",
+    "names": {
+      "classic": "Klasik",
+      "sunset": "Gün batımı",
+      "neon": "Neon",
+      "pastel": "Pastel",
+      "graphite": "Grafit",
+      "moss": "Yosun",
+      "indigo": "Çivit",
+      "cherry": "Kiraz"
+    }
+  },
+  "modes": {
+    "title": "Birleştirmenin üç yolu",
+    "lede": "Her mod, tahtada neye baktığınızı değiştirir. Birinde edindiğiniz alışkanlıklar ötekinde ayağınıza dolanır.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "2’nin kuvvetleri",
+        "body": "Bilinen klasik: iki aynı karo, toplamları değerinde tek bir karo olur."
+      },
+      {
+        "kind": "pow3",
+        "name": "3’ün kuvvetleri",
+        "body": "Üç aynı karo bir karo olur. Tahtada daha çok yer var, her hata daha pahalı."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Aynı karolar değil, dizideki komşu sayılar birleşir: 3 ile 5, 8 eder."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Etütler: hazır bir konum, bir görev, birkaç hamle",
+    "body": "Dört hamlede 128 yapın ya da tahtada yalnızca beş karo bırakın. Yeni karo gelmez, yani ihtiyacınız olan her şey zaten tahtada – ve her etüdün kesin bir çözümü var.",
+    "points": [
+      "Yedi bölümde 84 etüt, 3×3’ten 5×5’te Fibonacci’ye kadar",
+      "İpucu ilk hamleyi gösterir; başarısız olunca oyun çözümü baştan oynatır",
+      "Herkese ücretsiz bir günün etüdü; hafta sonuna doğru etütler uzar"
+    ],
+    "alt": "Tilefold’da bir etüt: 4 hamlede 128 yapın"
+  },
+  "daily": {
+    "title": "Günde bir bulmaca, herkes için aynı",
+    "body": "Tüm oyuncular için tek tahta ve tek deneme: yeniden başlatma yok, geri alma yok. Sonucunuzu kart olarak paylaşın ve çözülen günler serinizi sürdürün.",
+    "duelTitle": "Bir arkadaşınızı düelloya çağırın",
+    "duelBody": "Dağıtımınızın bağlantısını gönderin. Arkadaşınız tıpatıp aynı tahtayı oynar ve geçmesi gereken skoru görür – oyun yüklü olmasa bile, doğrudan bağlantıdan.",
+    "alt": "Tilefold’da günün bulmacası"
+  },
+  "help": {
+    "title": "Takıldığınızda yardım, bittiğinde geriye bir bakış",
+    "hintTitle": "İpuçları",
+    "hintBody": "Takıldınız mı? Ampule dokunun, bir ok size hamle önersin. Her oyunda üç ipucu, ücretsiz; günün bulmacasında ve düellolarda ipucu yoktur, çünkü herkes onları tek denemeyle oynar.",
+    "hintAlt": "Tilefold tahtasında ipucu oku",
+    "reviewTitle": "Oyun analizi",
+    "reviewBody": "Oyun bitince uygulama onu yeniden oynatır ve işlerin ters gittiği hamleyi bulur: ne oynadığınızı ve neyin daha iyi olacağını. Hepsi cihazınızda hesaplanır.",
+    "reviewAlt": "Tilefold’da daha iyi bir hamle gösteren oyun analizi"
+  },
+  "sizes": {
+    "title": "Beş tahta, sekiz palet",
+    "body": "Her hamlenin önemli olduğu dar 3×3’ten geniş 7×7’ye. Her modun ve boyutun kendi rekoru ve kendi liderlik tablosu var.",
+    "palettes": "Beş palet oyunla gelir, üçü daha Tilefold Plus ile. Karolardaki sayılar kontrasta göre seçildi, böylece tahta hangi palette olursa olsun okunaklı kalır.",
+    "sizesAlt": "Tilefold’da 7’ye 7 tahta",
+    "palettesAlt": "Tilefold’da palet seçimi"
+  },
+  "everywhere": {
+    "title": "Nerede oynarsanız oynayın",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widget’lar",
+        "body": "Tahtanız, rekorunuz ve günün bulmacası ana ekranda ve kilitli ekranda."
+      },
+      {
+        "icon": "control",
+        "title": "Denetim Merkezi",
+        "body": "Bir denetim, günün bulmacasını tek dokunuşla açar ve çözülüp çözülmediğini gösterir."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Kestirmeler",
+        "body": "Yeni oyun başlatın, günün bulmacasını ya da etüdünü açın veya rekorunuzu sorun – Kestirmeler’den ve Siri’den."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Günün bulmacası bağlantısı hemen açılır – önce oyunu yüklemeniz gerekmez."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Her pencerede ekrana sığan bir tahta; isterseniz donanım klavyesiyle oynayın."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Apple silicon’lu Mac’lerde çalışır: ok tuşlarıyla oynanır, ⌘Z hamleyi geri alır."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Her mod ve boyut için liderlik tabloları ve başarılar. İsteğe bağlı."
+      },
+      {
+        "icon": "offline",
+        "title": "Çevrimdışı",
+        "body": "İpuçları ve oyun analizi dahil her şey bağlantı olmadan çalışır."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Hesap yok, reklam yok, izleme yok",
+    "body": "Oyun sizinle ilgili hiçbir şey sormaz. Rekorlar ve istatistikler kendi iCloud’unuza gider. Çökmeleri düzeltmek ve hangi ekranların kullanıldığını görmek için anonim çökme raporları ve kullanım istatistikleri Google Firebase’e gönderilir – reklam kimliği olmadan, sizi tanımlayan hiçbir şey olmadan.",
+    "link": "Gizlilik politikasını okuyun"
+  },
+  "plus": {
+    "title": "Oynamak ücretsiz. Daha fazlası için Plus",
+    "lede": "Oyunun tamamı ücretsiz. Tilefold Plus; etütler, paletler ve oyunlarınıza geri dönüp bakmak için araçlar ekleyen tek seferlik bir satın almadır.",
+    "caption": "Neler ücretsiz, neler Tilefold Plus ile geliyor",
+    "feature": "Özellik",
+    "free": "Ücretsiz",
+    "rows": [
+      {
+        "label": "Üç modun tümü ve beş tahta boyutu",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Günün bulmacası ve düellolar",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "İpuçları, oyun başına üç",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Günün etüdü ve iki etüt bölümü",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Beş etüt bölümü daha",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Beş palet",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Yosun, Çivit ve Kiraz paletleri",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Oyun istatistikleri",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Geçmiş günlük bulmacaların arşivi",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Oyun analizi",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Bir kez ödeyin, sonsuza dek sizin: abonelik yok, aynı Apple Hesabı’yla kullandığınız tüm cihazlarınızda çalışır."
+  },
+  "faq": {
+    "title": "Sorular",
+    "items": [
+      {
+        "q": "Tilefold ücretsiz mi?",
+        "a": "Evet. Tüm modlar, tahta boyutları, günün bulmacası, düellolar, ipuçları ve günün etüdü ücretsiz. Tilefold Plus isteğe bağlı, tek seferlik bir satın alma."
+      },
+      {
+        "q": "Reklam var mı?",
+        "a": "Hayır. Oyunda reklam yok, reklam kimliği yok, uygulamalar ve web siteleri arasında izleme de yok."
+      },
+      {
+        "q": "Hangi cihazlarda çalışır?",
+        "a": "iOS ve iPadOS 26 veya sonrası yüklü iPhone ve iPad’de, ayrıca Apple silicon’lu Mac’lerde."
+      },
+      {
+        "q": "Rekorlarım yeni cihaza taşınır mı?",
+        "a": "Evet. Rekorlar, istatistikler ve günün bulmacası sonuçları iCloud’unuzda saklanır ve aynı hesapla giriş yapılmış her cihaza gelir."
+      },
+      {
+        "q": "Plus satın aldım – başka bir cihazda nasıl açarım?",
+        "a": "Aynı Apple Hesabı ile giriş yapmışken Ayarlar › Tilefold Plus’ı açın ve “Satın alınanları geri yükle”ye dokunun."
+      },
+      {
+        "q": "İnternet bağlantısı gerekir mi?",
+        "a": "Hayır. Bağlantı yalnızca Game Center ve iCloud eşzamanlaması için gerekir; oyun onlarsız da gayet iyi çalışır."
+      }
+    ]
+  },
+  "final": {
+    "title": "Günün bulmacasıyla başlayın",
+    "body": "Tek tahta, herkes için aynı, ve tek deneme. Birkaç dakika sürer – yarın da yenisi gelir.",
+    "daily": "Günün bulmacasını açın"
+  },
+  "footer": {
+    "tagline": "iPhone, iPad ve Mac için karo kaydırma bulmacası.",
+    "navLabel": "Site",
+    "support": "Destek",
+    "privacy": "Gizlilik Politikası",
+    "press": "Basın",
+    "daily": "Günün bulmacası",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, Apple logosu, iPhone, iPad, Mac ve App Store, Apple Inc.’in ABD’de ve diğer ülkelerde tescilli ticari markalarıdır."
+  }
+}

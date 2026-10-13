@@ -1,0 +1,254 @@
+{
+  "lang": "fr",
+  "path": "/fr/",
+  "meta": {
+    "title": "Tilefold – un puzzle de tuiles à faire glisser pour iPhone, iPad et Mac",
+    "description": "Faites glisser les tuiles, fusionnez les identiques et atteignez l’objectif. Trois modes, cinq tailles de plateau, un puzzle du jour, des études, des indices et l’analyse des parties. Gratuit, sans publicité.",
+    "ogTitle": "Tilefold – glisser, fusionner, réfléchir",
+    "ogDescription": "Un puzzle de tuiles à faire glisser, avec trois modes, un puzzle du jour et des études. Gratuit, sans publicité.",
+    "ogAlt": "Un plateau de Tilefold avec des tuiles fusionnées"
+  },
+  "ui": {
+    "skip": "Aller au contenu",
+    "langNav": "Langue et apparence",
+    "language": "Langue",
+    "theme": {
+      "label": "Apparence",
+      "auto": "Auto",
+      "light": "Clair",
+      "dark": "Sombre"
+    },
+    "badgeAlt": "Télécharger dans l’App Store",
+    "included": "Inclus",
+    "notIncluded": "Non inclus",
+    "boardLabel": "Un plateau jouable de 4 sur 4. Les flèches du clavier ou un balayage font glisser les tuiles.",
+    "boardHint": "Balayez ou utilisez les flèches",
+    "boardYou": "C’est vous qui jouez",
+    "score": "Score"
+  },
+  "hero": {
+    "title": "Deux 2 font un 4. Ensuite, il faut réfléchir.",
+    "lede": "Faites glisser les tuiles – elles bougent toutes à la fois, et les identiques fusionnent en une seule. Les règles se comprennent en une seconde ; la profondeur vient quand le plateau cesse de pardonner un coup de trop.",
+    "price": "Gratuit, sans publicité"
+  },
+  "palettes": {
+    "label": "Les palettes du jeu",
+    "names": {
+      "classic": "Classique",
+      "sunset": "Coucher de soleil",
+      "neon": "Néon",
+      "pastel": "Pastel",
+      "graphite": "Graphite",
+      "moss": "Mousse",
+      "indigo": "Indigo",
+      "cherry": "Cerise"
+    }
+  },
+  "modes": {
+    "title": "Trois façons de fusionner",
+    "lede": "Chaque mode change ce que vous cherchez sur le plateau. Les habitudes prises dans l’un vous gênent dans l’autre.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "Puissances 2",
+        "body": "Le classique : deux tuiles identiques n’en font plus qu’une, qui vaut leur somme."
+      },
+      {
+        "kind": "pow3",
+        "name": "Puissances 3",
+        "body": "Trois tuiles identiques fusionnent en une. Plus de place sur le plateau, et chaque erreur coûte plus cher."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Ce sont les voisins dans la suite qui fusionnent, pas les tuiles identiques : 3 et 5 donnent 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Études : une position donnée, un objectif, quelques coups",
+    "body": "Formez 128 en quatre coups, ou ne laissez que cinq tuiles sur le plateau. Aucune nouvelle tuile n’apparaît, tout ce qu’il vous faut est donc déjà là – et chaque étude a une solution exacte.",
+    "points": [
+      "84 études en sept chapitres, du 3×3 à Fibonacci en 5×5",
+      "Un indice montre le premier coup ; après un échec, le jeu rejoue la solution",
+      "Une étude du jour gratuite pour tous, plus longue vers la fin de la semaine"
+    ],
+    "alt": "Une étude dans Tilefold : formez 128 en 4 coups"
+  },
+  "daily": {
+    "title": "Un puzzle par jour, le même pour tous",
+    "body": "Un plateau pour tous les joueurs et un seul essai : ni recommencer, ni annuler. Partagez votre résultat sous forme de carte et prolongez votre série de jours résolus.",
+    "duelTitle": "Proposez un duel à un ami",
+    "duelBody": "Envoyez un lien vers votre donne. Votre ami joue exactement le même plateau et voit le score à battre – même sans le jeu installé, directement depuis le lien.",
+    "alt": "Le puzzle du jour dans Tilefold"
+  },
+  "help": {
+    "title": "De l’aide quand vous bloquez, un regard en arrière quand c’est fini",
+    "hintTitle": "Indices",
+    "hintBody": "Bloqué ? Touchez l’ampoule et une flèche vous suggère un coup. Trois indices par partie, gratuits ; le puzzle du jour et les duels s’en passent, puisque chacun n’y a qu’un seul essai.",
+    "hintAlt": "Une flèche d’indice sur le plateau de Tilefold",
+    "reviewTitle": "Analyse de la partie",
+    "reviewBody": "Après une partie, l’app la rejoue et trouve le coup où tout a basculé : ce que vous avez joué, et ce qui aurait été mieux. Tout est calculé sur votre appareil.",
+    "reviewAlt": "L’analyse de la partie dans Tilefold, avec un meilleur coup"
+  },
+  "sizes": {
+    "title": "Cinq plateaux, huit palettes",
+    "body": "Du 3×3 exigu, où chaque coup compte, au 7×7 spacieux. Chaque mode et chaque taille ont leur propre record et leur propre classement.",
+    "palettes": "Cinq palettes sont fournies avec le jeu, trois autres avec Tilefold Plus. Les chiffres de chaque tuile sont choisis pour leur contraste : le plateau reste lisible dans toutes les palettes.",
+    "sizesAlt": "Un plateau de 7 sur 7 dans Tilefold",
+    "palettesAlt": "Choix d’une palette dans Tilefold"
+  },
+  "everywhere": {
+    "title": "Où que vous jouiez",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widgets",
+        "body": "Votre plateau, votre record et le puzzle du jour sur l’écran d’accueil et l’écran verrouillé."
+      },
+      {
+        "icon": "control",
+        "title": "Centre de contrôle",
+        "body": "Une commande ouvre le puzzle du jour d’un seul toucher et indique s’il est résolu."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Raccourcis",
+        "body": "Lancez une nouvelle partie, ouvrez le puzzle ou l’étude du jour, ou demandez votre record – depuis Raccourcis et Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Un lien vers le puzzle du jour s’ouvre aussitôt – inutile d’installer le jeu d’abord."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Un plateau à la taille de l’écran dans n’importe quelle fenêtre, avec un clavier physique si vous le souhaitez."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Fonctionne sur les Mac avec Apple silicon, avec les flèches du clavier et ⌘Z pour annuler."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Des classements pour chaque mode et chaque taille, et des succès. Facultatif."
+      },
+      {
+        "icon": "offline",
+        "title": "Hors ligne",
+        "body": "Tout, y compris les indices et l’analyse des parties, fonctionne sans connexion."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Ni compte, ni publicité, ni pistage",
+    "body": "Le jeu ne vous demande rien sur vous. Les records et les statistiques vont dans votre propre iCloud. Pour corriger les plantages et voir quels écrans sont utilisés, des rapports de plantage et des statistiques d’utilisation anonymes sont envoyés à Google Firebase – sans identifiant publicitaire, sans rien qui permette de vous identifier.",
+    "link": "Lire la politique de confidentialité"
+  },
+  "plus": {
+    "title": "Gratuit pour jouer. Plus si vous en voulez davantage",
+    "lede": "Tout le jeu est gratuit. Tilefold Plus est un achat unique qui ajoute des études, des palettes et des outils pour revenir sur vos parties.",
+    "caption": "Ce qui est gratuit et ce qui vient avec Tilefold Plus",
+    "feature": "Fonctionnalité",
+    "free": "Gratuit",
+    "rows": [
+      {
+        "label": "Les trois modes et les cinq tailles de plateau",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Le puzzle du jour et les duels",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Indices, trois par partie",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "L’étude du jour et deux chapitres d’études",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Cinq chapitres d’études en plus",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Cinq palettes",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Palettes « Mousse », « Indigo » et « Cerise »",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Statistiques des parties",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Archive des puzzles du jour passés",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Analyse des parties",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Payez une fois, gardez-le pour toujours : pas d’abonnement, et il fonctionne sur tous vos appareils connectés au même compte Apple."
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      {
+        "q": "Tilefold est-il gratuit ?",
+        "a": "Oui. Tous les modes, toutes les tailles de plateau, le puzzle du jour, les duels, les indices et l’étude du jour sont gratuits. Tilefold Plus est un achat unique facultatif."
+      },
+      {
+        "q": "Y a-t-il de la publicité ?",
+        "a": "Non. Le jeu n’affiche aucune publicité, n’utilise pas d’identifiant publicitaire et ne vous piste pas à travers les apps et les sites web."
+      },
+      {
+        "q": "Sur quels appareils fonctionne-t-il ?",
+        "a": "Sur iPhone et iPad avec iOS et iPadOS 26 ou version ultérieure, et sur les Mac avec Apple silicon."
+      },
+      {
+        "q": "Mes records me suivront-ils sur un nouvel appareil ?",
+        "a": "Oui. Les records, les statistiques et les résultats des puzzles du jour sont conservés dans votre iCloud et arrivent sur tout appareil connecté au même compte."
+      },
+      {
+        "q": "J’ai acheté Plus – comment l’obtenir sur un autre appareil ?",
+        "a": "Ouvrez Réglages › Tilefold Plus et touchez « Restaurer les achats », en étant connecté avec le même compte Apple."
+      },
+      {
+        "q": "Faut-il une connexion Internet ?",
+        "a": "Non. Seuls Game Center et la synchronisation via iCloud ont besoin d’une connexion, et le jeu fonctionne très bien sans eux."
+      }
+    ]
+  },
+  "final": {
+    "title": "Commencez par le puzzle du jour",
+    "body": "Un plateau, le même pour tous, et un seul essai. Il suffit de quelques minutes – et demain, il y en aura un nouveau.",
+    "daily": "Ouvrir le puzzle du jour"
+  },
+  "footer": {
+    "tagline": "Un puzzle de tuiles à faire glisser pour iPhone, iPad et Mac.",
+    "navLabel": "Site",
+    "support": "Assistance",
+    "privacy": "Politique de confidentialité",
+    "press": "Presse",
+    "daily": "Puzzle du jour",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, le logo Apple, iPhone, iPad, Mac et App Store sont des marques d’Apple Inc., déposées aux États-Unis et dans d’autres pays."
+  }
+}

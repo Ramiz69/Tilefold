@@ -1,0 +1,254 @@
+{
+  "lang": "de",
+  "path": "/de/",
+  "meta": {
+    "title": "Tilefold – ein Schiebepuzzle mit Kacheln für iPhone, iPad und Mac",
+    "description": "Schiebe die Kacheln, verschmelze gleiche und erreiche das Ziel. Drei Modi, fünf Feldgrößen, ein Tagesrätsel, Etüden, Tipps und Spielauswertung. Kostenlos, ohne Werbung.",
+    "ogTitle": "Tilefold – schieben, verschmelzen, nachdenken",
+    "ogDescription": "Ein Schiebepuzzle mit Kacheln: drei Modi, ein Tagesrätsel und Etüden. Kostenlos, ohne Werbung.",
+    "ogAlt": "Ein Tilefold-Spielfeld mit verschmolzenen Kacheln"
+  },
+  "ui": {
+    "skip": "Zum Inhalt springen",
+    "langNav": "Sprache und Darstellung",
+    "language": "Sprache",
+    "theme": {
+      "label": "Farbschema",
+      "auto": "Automatisch",
+      "light": "Hell",
+      "dark": "Dunkel"
+    },
+    "badgeAlt": "Laden im App Store",
+    "included": "Enthalten",
+    "notIncluded": "Nicht enthalten",
+    "boardLabel": "Ein spielbares Feld, 4 mal 4. Mit den Pfeiltasten oder durch Wischen verschiebst du die Kacheln.",
+    "boardHint": "Wische oder nutze die Pfeiltasten",
+    "boardYou": "Du spielst",
+    "score": "Punkte"
+  },
+  "hero": {
+    "title": "Zwei Zweien ergeben eine Vier. Danach heißt es nachdenken.",
+    "lede": "Schiebe die Kacheln – sie bewegen sich alle zugleich, und gleiche verschmelzen zu einer. Die Regeln sind in einer Sekunde klar; die Tiefe zeigt sich, wenn das Feld einen unbedachten Zug nicht mehr verzeiht.",
+    "price": "Kostenlos, ohne Werbung"
+  },
+  "palettes": {
+    "label": "Die Paletten des Spiels",
+    "names": {
+      "classic": "Klassik",
+      "sunset": "Sonnenuntergang",
+      "neon": "Neon",
+      "pastel": "Pastell",
+      "graphite": "Graphit",
+      "moss": "Moos",
+      "indigo": "Indigo",
+      "cherry": "Kirsche"
+    }
+  },
+  "modes": {
+    "title": "Drei Arten zu verschmelzen",
+    "lede": "Jeder Modus ändert, wonach du auf dem Feld suchst. Was du dir in einem angewöhnst, steht dir im nächsten im Weg.",
+    "items": [
+      {
+        "kind": "pow2",
+        "name": "2er-Potenzen",
+        "body": "Der Klassiker: Zwei gleiche Kacheln werden zu einer, die ihre Summe trägt."
+      },
+      {
+        "kind": "pow3",
+        "name": "3er-Potenzen",
+        "body": "Drei gleiche Kacheln werden zu einer. Mehr Platz auf dem Feld, und jeder Fehler kostet mehr."
+      },
+      {
+        "kind": "fib",
+        "name": "Fibonacci",
+        "body": "Nicht gleiche Kacheln verschmelzen, sondern Nachbarn in der Reihe: 3 und 5 ergeben 8."
+      }
+    ]
+  },
+  "etudes": {
+    "title": "Etüden: eine fertige Stellung, ein Ziel, ein paar Züge",
+    "body": "Erreiche 128 in vier Zügen oder lass nur fünf Kacheln auf dem Feld. Neue Kacheln erscheinen nicht, alles Nötige liegt also schon da – und jede Etüde hat eine exakte Lösung.",
+    "points": [
+      "84 Etüden in sieben Kapiteln, von 3×3 bis Fibonacci auf 5×5",
+      "Ein Tipp zeigt den ersten Zug; nach einem Fehlversuch spielt das Spiel die Lösung vor",
+      "Eine kostenlose Etüde des Tages für alle, zum Wochenende hin länger"
+    ],
+    "alt": "Eine Etüde in Tilefold: Erreiche 128 in 4 Zügen"
+  },
+  "daily": {
+    "title": "Ein Rätsel pro Tag, für alle dasselbe",
+    "body": "Ein Feld für alle und ein einziger Versuch: kein Neustart, kein Zurück. Teile dein Ergebnis als Karte und halte deine Serie gelöster Tage am Laufen.",
+    "duelTitle": "Fordere einen Freund zum Duell",
+    "duelBody": "Schick einen Link zu deiner Verteilung. Dein Freund spielt genau dasselbe Feld und sieht die Punktzahl, die es zu schlagen gilt – direkt über den Link, auch ohne installiertes Spiel.",
+    "alt": "Das Tagesrätsel in Tilefold"
+  },
+  "help": {
+    "title": "Hilfe, wenn du festhängst, und ein Rückblick, wenn es vorbei ist",
+    "hintTitle": "Tipps",
+    "hintBody": "Festgefahren? Tippe auf die Glühbirne, und ein Pfeil schlägt einen Zug vor. Drei Tipps pro Spiel, kostenlos; im Tagesrätsel und in Duellen gibt es keine, denn dort haben alle nur einen Versuch.",
+    "hintAlt": "Ein Tipp-Pfeil auf dem Tilefold-Spielfeld",
+    "reviewTitle": "Spielauswertung",
+    "reviewBody": "Nach einem Spiel spielt die App es noch einmal durch und findet den Zug, an dem es kippte: was du gespielt hast und was besser gewesen wäre. Alles läuft auf deinem Gerät.",
+    "reviewAlt": "Spielauswertung in Tilefold mit einem besseren Zug"
+  },
+  "sizes": {
+    "title": "Fünf Felder, acht Paletten",
+    "body": "Vom engen 3×3, auf dem jeder Zug zählt, bis zum geräumigen 7×7. Jeder Modus und jede Größe hat einen eigenen Rekord und eine eigene Bestenliste.",
+    "palettes": "Fünf Paletten sind im Spiel enthalten, drei weitere gibt es mit Tilefold Plus. Die Zahlen auf den Kacheln sind auf Kontrast abgestimmt, damit das Feld in jeder Palette gut lesbar bleibt.",
+    "sizesAlt": "Ein Feld mit 7 mal 7 Kacheln in Tilefold",
+    "palettesAlt": "Palettenauswahl in Tilefold"
+  },
+  "everywhere": {
+    "title": "Wo immer du spielst",
+    "facts": [
+      {
+        "icon": "widget",
+        "title": "Widgets",
+        "body": "Dein Spielfeld, dein Rekord und das Tagesrätsel auf dem Home-Bildschirm und dem Sperrbildschirm."
+      },
+      {
+        "icon": "control",
+        "title": "Kontrollzentrum",
+        "body": "Ein Steuerelement öffnet das heutige Rätsel mit einem Tippen und zeigt, ob es gelöst ist."
+      },
+      {
+        "icon": "shortcuts",
+        "title": "Kurzbefehle",
+        "body": "Starte ein neues Spiel, öffne das heutige Rätsel oder die Etüde des Tages oder frag nach deinem Rekord – über Kurzbefehle und Siri."
+      },
+      {
+        "icon": "clip",
+        "title": "App Clip",
+        "body": "Ein Link zum Tagesrätsel öffnet sich sofort – das Spiel musst du vorher nicht installieren."
+      },
+      {
+        "icon": "ipad",
+        "title": "iPad",
+        "body": "Ein Feld, das in jedes Fenster passt, auf Wunsch mit Hardware-Tastatur."
+      },
+      {
+        "icon": "mac",
+        "title": "Mac",
+        "body": "Läuft auf Macs mit Apple silicon, mit Pfeiltasten und ⌘Z zum Widerrufen."
+      },
+      {
+        "icon": "trophy",
+        "title": "Game Center",
+        "body": "Bestenlisten für jeden Modus und jede Größe, dazu Erfolge. Optional."
+      },
+      {
+        "icon": "offline",
+        "title": "Offline",
+        "body": "Alles, auch Tipps und Spielauswertung, funktioniert ohne Verbindung."
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Kein Konto, keine Werbung, kein Tracking",
+    "body": "Das Spiel fragt nichts über dich ab. Rekorde und Statistik liegen in deiner eigenen iCloud. Um Abstürze zu beheben und zu sehen, welche Bildschirme genutzt werden, gehen anonyme Absturzberichte und Nutzungsstatistiken an Google Firebase – ohne Werbe-ID und ohne etwas, das dich identifiziert.",
+    "link": "Datenschutzrichtlinie lesen"
+  },
+  "plus": {
+    "title": "Kostenlos spielen. Plus, wenn du mehr willst",
+    "lede": "Das ganze Spiel ist kostenlos. Tilefold Plus ist ein einmaliger Kauf und bringt Etüden, Paletten und Werkzeuge, um auf deine Spiele zurückzublicken.",
+    "caption": "Was kostenlos ist und was zu Tilefold Plus gehört",
+    "feature": "Funktion",
+    "free": "Kostenlos",
+    "rows": [
+      {
+        "label": "Alle drei Modi und fünf Feldgrößen",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Das Tagesrätsel und Duelle",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Tipps, drei pro Spiel",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Etüde des Tages und zwei Etüden-Kapitel",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Fünf weitere Etüden-Kapitel",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Fünf Paletten",
+        "free": true,
+        "plus": true
+      },
+      {
+        "label": "Paletten „Moos“, „Indigo“ und „Kirsche“",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Spielstatistik",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Archiv vergangener Tagesrätsel",
+        "free": false,
+        "plus": true
+      },
+      {
+        "label": "Spielauswertung",
+        "free": false,
+        "plus": true
+      }
+    ],
+    "note": "Einmal zahlen, für immer behalten: kein Abo, und es gilt auf allen deinen Geräten mit demselben Apple Account."
+  },
+  "faq": {
+    "title": "Fragen",
+    "items": [
+      {
+        "q": "Ist Tilefold kostenlos?",
+        "a": "Ja. Alle Modi und Feldgrößen, das Tagesrätsel, Duelle, Tipps und die Etüde des Tages sind kostenlos. Tilefold Plus ist ein optionaler einmaliger Kauf."
+      },
+      {
+        "q": "Gibt es Werbung?",
+        "a": "Nein. Im Spiel gibt es keine Werbung, keine Werbe-ID und kein Tracking über Apps und Websites hinweg."
+      },
+      {
+        "q": "Auf welchen Geräten läuft es?",
+        "a": "Auf iPhone und iPad mit iOS bzw. iPadOS 26 oder neuer und auf Macs mit Apple silicon."
+      },
+      {
+        "q": "Kommen meine Rekorde mit auf ein neues Gerät?",
+        "a": "Ja. Rekorde, Statistik und Ergebnisse der Tagesrätsel liegen in deiner iCloud und erscheinen auf jedem Gerät, das mit demselben Account angemeldet ist."
+      },
+      {
+        "q": "Ich habe Plus gekauft – wie bekomme ich es auf ein anderes Gerät?",
+        "a": "Öffne Einstellungen › Tilefold Plus und tippe auf „Käufe wiederherstellen“ – angemeldet mit demselben Apple Account."
+      },
+      {
+        "q": "Brauche ich eine Internetverbindung?",
+        "a": "Nein. Nur Game Center und die Synchronisierung über iCloud brauchen eine Verbindung, und das Spiel funktioniert auch ohne sie bestens."
+      }
+    ]
+  },
+  "final": {
+    "title": "Fang mit dem heutigen Rätsel an",
+    "body": "Ein Feld, für alle dasselbe, und ein einziger Versuch. Das dauert ein paar Minuten – und morgen gibt es ein neues.",
+    "daily": "Heutiges Rätsel öffnen"
+  },
+  "footer": {
+    "tagline": "Ein Schiebepuzzle mit Kacheln für iPhone, iPad und Mac.",
+    "navLabel": "Website",
+    "support": "Support",
+    "privacy": "Datenschutzrichtlinie",
+    "press": "Presse",
+    "daily": "Heutiges Rätsel",
+    "small": "© 2016–2026 Ramiz Kichibekov. Apple, das Apple Logo, iPhone, iPad, Mac und App Store sind Marken der Apple Inc., die in den USA und weiteren Ländern eingetragen sind."
+  }
+}
