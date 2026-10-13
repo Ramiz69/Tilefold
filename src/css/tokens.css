@@ -108,3 +108,6 @@ a:hover { text-decoration-thickness: 2px; }
   .open > .menu { transition: opacity .15s ease-out, visibility 0s; }
   body { transition: none; }
 }
+
+/* Японский: перенос по фразам, а не посреди слова («考え / どころ»). */
+:lang(ja) :is(h1, h2, h3, p, li) { word-break: auto-phrase; }

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tilefold – картинки для соцсетей</title>
+<!-- Рисует картинку 1200×630 для каждого языка сайта и сохраняет её через tools/og.mjs.
+     Открыть http://localhost:8790/tools/og.html (все языки) или ?lang=de (один).
+     Слева – иконка, название и заголовок первого экрана на языке страницы, справа – доска
+     в палитре «Классика»; у арабского всё зеркально. -->
+<style>
+  body { margin: 0; background: #222; color: #ccc; font: 14px -apple-system, system-ui, sans-serif; }
+  canvas { display: block; width: 600px; height: 315px; margin: 12px; }
+  pre { margin: 12px; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1200" height="630"></canvas>
+<pre id="log"></pre>
+<script type="module">
+const LANGS = ['en', 'ru', 'uk', 'ar', 'de', 'es', 'fr', 'hi', 'id', 'it', 'ja', 'ko', 'pt-BR', 'tr', 'vi', 'zh-Hans', 'zh-Hant'];
+const BG = '#FAF8EF', TRAY = '#BBADA0', CELL = '#CCC0B3', INK = '#776E65';
+const TILE = { 2: '#EEE4DA', 4: '#EDE0C8', 8: '#F2B179', 16: '#F59563', 32: '#F67C5F', 64: '#F65E3B', 128: '#EDCF72', 256: '#EDCC61', 512: '#EDC850' };
+// Позиция, которую узнаёт любой, кто играл: крупное в углу, цепочка к нему.
+const BOARD = [
+  [0, 0, 2, 0],
+  [0, 4, 0, 2],
+  [8, 16, 32, 4],
+  [512, 256, 128, 64],
+];
+const FONT = '-apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif';
+const log = s => { document.getElementById('log').textContent += s + '\n'; };
+
+const lum = h => { const c = i => { const v = parseInt(h.slice(i, i + 2), 16) / 255; return v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; }; return .2126 * c(1) + .7152 * c(3) + .0722 * c(5); };
+const contrast = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+const inkOn = bg => contrast(bg, '#181412') >= contrast(bg, '#FFFFFF') ? '#181412' : '#FFFFFF';
+
+function rounded(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); ctx.fill(); }
+
+// Перенос по словам. У японского и китайского пробелов нет: сначала заголовок делится на
+// фразы после 、。， – там строку и принято переносить; фразу, которая не влезает, делит на
+// слова Intl.Segmenter. Знак препинания никогда не начинает строку (иначе «。» уезжал один).
+const PUNCT = /^[、。，．！？」』）,.!?]+$/;
+function lines(ctx, text, width, cjk, lang) {
+  const fits = s => ctx.measureText(s).width <= width;
+  let units;
+  if (cjk) {
+    const words = s => [...new Intl.Segmenter(lang, { granularity: 'word' }).segment(s)].map(x => x.segment);
+    units = text.split(/(?<=[、。，])/).flatMap(ph => fits(ph) ? [ph] : words(ph));
+  } else units = text.split(' ');
+  const out = []; let line = '';
+  for (const u of units) {
+    const next = line ? (cjk ? line + u : line + ' ' + u) : u;
+    if (line && !fits(next) && !(cjk && PUNCT.test(u))) { out.push(line); line = u; } else line = next;
+  }
+  if (line) out.push(line);
+  return out;
+}
+
+async function draw(lang) {
+  const t = await (await fetch(`/i18n/${lang}.json`)).json();
+  const icon = await new Promise(r => { const i = new Image(); i.onload = () => r(i); i.src = '/src/static/icon.png'; });
+  const rtl = lang === 'ar', cjk = /^(ja|zh)/.test(lang);
+  const c = document.getElementById('c'), ctx = c.getContext('2d');
+  ctx.fillStyle = BG; ctx.fillRect(0, 0, 1200, 630);
+
+  // Доска справа (у арабского – слева).
+  const side = 450, gap = 13, cell = (side - gap * 5) / 4;
+  const bx = rtl ? 70 : 1200 - 70 - side, by = (630 - side) / 2;
+  ctx.fillStyle = TRAY; rounded(ctx, bx, by, side, side, 18);
+  BOARD.forEach((row, r) => row.forEach((v, col) => {
+    const x = bx + gap + col * (cell + gap), y = by + gap + r * (cell + gap);
+    ctx.fillStyle = v ? TILE[v] : CELL; rounded(ctx, x, y, cell, cell, 11);
+    if (v) {
+      ctx.fillStyle = inkOn(TILE[v]);
+      ctx.font = `800 ${v >= 100 ? 38 : 48}px ${FONT}`;
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.direction = 'ltr';
+      ctx.fillText(String(v), x + cell / 2, y + cell / 2 + 2);
+    }
+  }));
+
+  // Текст – в другой половине.
+  const tx = rtl ? 1200 - 70 : 70, tw = 1200 - 70 * 2 - side - 70;
+  ctx.direction = rtl ? 'rtl' : 'ltr'; ctx.textAlign = 'start'; ctx.textBaseline = 'alphabetic';
+  ctx.save();
+  const ix = rtl ? tx - 56 : tx;
+  ctx.beginPath(); ctx.roundRect(ix, 92, 56, 56, 13); ctx.clip(); ctx.drawImage(icon, ix, 92, 56, 56); ctx.restore();
+  ctx.fillStyle = INK; ctx.font = `700 34px ${FONT}`;
+  ctx.fillText('Tilefold', rtl ? tx - 72 : tx + 72, 132);
+
+  let size = 64, rows;
+  do { ctx.font = `800 ${size}px ${FONT}`; rows = lines(ctx, t.hero.title, tw, cjk, lang); size -= 2; } while (rows.length > 4 && size > 36);
+  const lh = (size + 2) * 1.12;
+  const top = 315 - (rows.length * lh) / 2 + lh * .75;
+  rows.forEach((row, i) => ctx.fillText(row, tx, top + i * lh));
+
+  ctx.font = `500 28px ${FONT}`;
+  ctx.fillText(t.hero.price, tx, 540);
+
+  const blob = await new Promise(r => c.toBlob(r, 'image/png'));
+  const res = await fetch(`/save?lang=${lang}`, { method: 'POST', body: blob });
+  log(`${lang}: ${await res.text()}`);
+}
+
+const one = new URLSearchParams(location.search).get('lang');
+for (const lang of one ? [one] : LANGS) await draw(lang);
+log('готово');
+</script>
+</body>
+</html>
