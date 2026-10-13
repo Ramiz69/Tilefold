@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tilefold – прототип первого экрана</title>
+<style>
+/* Прототип первого экрана tilefold.app. Цвета страницы задаёт выбранная
+   палитра игры: фон, поднос, клетки, текст и плитки берутся из Theme.swift.
+   Своей палитры у сайта нет – он выглядит так, как выглядит игра. */
+:root {
+    color-scheme: light dark;
+    --bg: #FAF8EF; --tray: #BBADA0; --cell: #CCC0B3; --ink: #776E65;
+    --swatch-ring: color-mix(in srgb, var(--ink) 55%, transparent);
+    --rounded: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+    --body: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+    --board: min(88vw, 30rem);
+    --gap: calc(var(--board) * 0.028);
+    --radius: calc(var(--board) * 0.035);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 1.0625rem/1.55 var(--body);
+    transition: background-color .45s ease, color .45s ease;
+    -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) { body { transition: none; } }
+
+.hero {
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--board);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "head board" "cta board" ". palettes";
+    align-content: center;
+    column-gap: clamp(2rem, 6vw, 6rem);
+    row-gap: 1.25rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: max(2rem, env(safe-area-inset-top)) max(1.25rem, env(safe-area-inset-right))
+             max(2rem, env(safe-area-inset-bottom)) max(1.25rem, env(safe-area-inset-left));
+}
+.head { grid-area: head; max-width: 32rem; align-self: end; }
+.cta { grid-area: cta; max-width: 32rem; align-self: start; }
+.mark { display: flex; align-items: center; gap: .6rem; margin: 0 0 2.5rem; font: 700 1.25rem var(--rounded); }
+.mark span { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 4px; border-radius: 9px; background: var(--tray); }
+.mark i { width: 11px; height: 11px; border-radius: 3px; background: var(--cell); }
+.mark i:nth-child(2) { background: var(--t2); } .mark i:nth-child(3) { background: var(--t3); }
+h1 {
+    font: 800 clamp(2.3rem, 4.4vw, 3.5rem)/1.04 var(--rounded);
+    letter-spacing: -0.02em;
+    margin: 0 0 1.25rem;
+    text-wrap: balance;
+}
+.lede { font-size: 1.15rem; max-width: 34ch; margin: 0 0 2rem; text-wrap: pretty; }
+.get { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.badge img { display: block; height: 3rem; width: auto; }
+.badge .on-dark { display: none; }
+.price { font-size: .95rem; }
+
+.board-wrap { grid-area: board; position: relative; }
+.board {
+    position: relative;
+    width: var(--board); aspect-ratio: 1;
+    background: var(--tray);
+    border-radius: var(--radius);
+    touch-action: none;
+    outline: none;
+    transition: background-color .45s ease;
+}
+.board:focus-visible { box-shadow: 0 0 0 4px var(--bg), 0 0 0 7px var(--ink); }
+.cell, .tile {
+    position: absolute;
+    width: calc((var(--board) - var(--gap) * 5) / 4);
+    aspect-ratio: 1;
+    border-radius: calc(var(--radius) * 0.62);
+}
+.cell { background: var(--cell); transition: background-color .45s ease; }
+.tile {
+    display: grid; place-items: center;
+    font: 800 calc(var(--board) * 0.085)/1 var(--rounded);
+    font-variant-numeric: tabular-nums;
+    transition: transform .12s ease-in-out, background-color .45s ease, color .45s ease;
+    will-change: transform;
+}
+.tile.big { font-size: calc(var(--board) * 0.068); }
+.tile.huge { font-size: calc(var(--board) * 0.054); }
+.tile.new { animation: appear .18s ease-out .1s backwards; }
+.tile.merged { animation: pop .2s ease-out .1s; }
+@keyframes appear { from { scale: .2; opacity: 0; } }
+@keyframes pop { 50% { scale: 1.12; } }
+@media (prefers-reduced-motion: reduce) {
+    .tile { transition: background-color .45s ease, color .45s ease; }
+    .tile.new, .tile.merged { animation: none; }
+}
+.status { display: flex; justify-content: space-between; margin: .75rem .15rem 0; font: 600 .95rem var(--rounded); }
+.status output { font-variant-numeric: tabular-nums; }
+
+.palettes { grid-area: palettes; display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; border: 0; }
+.palettes legend { width: 100%; margin-bottom: .4rem; font: 600 .95rem var(--rounded); padding: 0; }
+.swatch { position: relative; }
+.swatch input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.swatch span {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+    width: 2.75rem; height: 2.75rem; padding: 4px;
+    border-radius: 12px; cursor: pointer;
+}
+.swatch span i { border-radius: 4px; }
+.swatch input:checked + span { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--ink); }
+.swatch input:focus-visible + span { box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--ink); }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+@media (max-width: 860px) {
+    .hero {
+        grid-template-columns: var(--board);
+        grid-template-rows: none;
+        grid-template-areas: "head" "board" "cta" "palettes";
+        justify-content: center;
+        row-gap: 1.25rem;
+        padding-top: max(1.25rem, env(safe-area-inset-top));
+    }
+    .head, .cta { max-width: none; }
+    .mark { margin-bottom: 1rem; }
+    h1 { font-size: clamp(2rem, 8.4vw, 2.6rem); margin-bottom: 0; }
+    .lede { margin-bottom: 1.25rem; }
+    .palettes { gap: .4rem; }
+    .swatch span { width: 2.25rem; height: 2.25rem; border-radius: 10px; padding: 3px; }
+}
+</style>
+</head>
+<body>
+<main class="hero">
+    <div class="head">
+        <p class="mark"><span aria-hidden="true"><i></i><i></i><i></i><i></i></span>Tilefold</p>
+        <h1>Две двойки дают четвёрку. Дальше&nbsp;– думайте.</h1>
+    </div>
+    <div class="cta">
+        <p class="lede">Сдвиньте плитки – двигаются все сразу, одинаковые складываются в одну. Правила понятны за секунду, а глубина открывается, когда доска перестаёт прощать лишний ход.</p>
+        <div class="get">
+            <a class="badge" href="https://apps.apple.com/app/apple-store/id1110343407?pt=118223827&amp;ct=site-home&amp;mt=8">
+                <img class="on-light" src="badge-black-ru.svg" alt="Загрузите в App Store">
+                <img class="on-dark" src="badge-white-ru.svg" alt="Загрузите в App Store">
+            </a>
+            <span class="price">Бесплатно, без рекламы</span>
+        </div>
+    </div>
+
+    <div class="board-wrap">
+        <div class="board" id="board" tabindex="0" role="application"
+             aria-label="Игровое поле 4 на 4. Стрелки или свайп сдвигают плитки."
+             aria-describedby="status"></div>
+        <p class="status" id="status" aria-live="polite">
+            <span id="hint">Свайп или стрелки</span>
+            <span>Счёт <output id="score">0</output></span>
+        </p>
+    </div>
+
+    <fieldset class="palettes" id="palettes">
+        <legend>Палитры игры</legend>
+    </fieldset>
+</main>
+
+<script>
+// Палитры – из Tilefold/Appearance/Theme.swift: светлый и тёмный фон, поднос,
+// клетки, цвет управления и плитки по уровням (2, 4, 8, …).
+const THEMES = {
+    classic:  { name: "Классика", bg: ["#FAF8EF", "#141210"], tray: ["#BBADA0", "#1E1C19"], cell: ["#CCC0B3", "#2A2724"], ink: ["#776E65", "#F5EFE6"],
+        tiles: ["#EEE4DA", "#EDE0C8", "#F2B179", "#F59563", "#F67C5F", "#F65E3B", "#EDCF72", "#EDCC61", "#EDC850", "#EDC53F", "#EDC22E"] },
+    sunset:   { name: "Закат", bg: ["#FDF6F0", "#160F0D"], tray: ["#C9B4A6", "#241715"], cell: ["#DCC8BB", "#33211E"], ink: ["#8E4A3A", "#FBE7DA"],
+        tiles: ["#FEDFB4", "#FFC98A", "#FFAC5E", "#FF8A5B", "#FF6B6B", "#F45B69", "#D1434E", "#B8323F", "#8E1F2C", "#7A1526", "#5E0E1E"] },
+    neon:     { name: "Неон", bg: ["#F2F4F8", "#0E1014"], tray: ["#B9C0CC", "#1A1D24"], cell: ["#CDD3DC", "#252A33"], ink: ["#2F5C7A", "#E6F0F7"],
+        tiles: ["#33B5E5", "#0099CC", "#6C7BE0", "#AA66CC", "#C45BB0", "#E05A8A", "#F2757A", "#F79E6B", "#F5C563", "#D8D26A", "#A8CE72"] },
+    pastel:   { name: "Пастель", bg: ["#FCF6F8", "#14100F"], tray: ["#D5C3CA", "#211A1E"], cell: ["#E6D6DC", "#2E2429"], ink: ["#8A4C68", "#F7E6EE"],
+        tiles: ["#FBE4EC", "#F8CBDC", "#F0C2CF", "#E89AB8", "#DE7CA5", "#CE6394", "#B44E80", "#963C6B", "#742C53", "#5D2343", "#471B34"] },
+    graphite: { name: "Графит", bg: ["#F7F6F3", "#121211"], tray: ["#C3BEB2", "#1D1D1B"], cell: ["#D8D3C7", "#282825"], ink: ["#565143", "#F3F1EA"],
+        tiles: ["#F3F1EA", "#E4E0D4", "#CFC9B8", "#B3AC98", "#948C78", "#756E5C", "#565143", "#3B372E", "#2C2924", "#22201B", "#1A1815"] },
+    moss:     { name: "Мох", bg: ["#F7F8F2", "#10120E"], tray: ["#AFB5A0", "#1E231A"], cell: ["#C3C8B6", "#2A3024"], ink: ["#5A6151", "#E8EFE0"],
+        tiles: ["#E9EDDF", "#DDE4CB", "#C6D6A8", "#AFC886", "#95B764", "#7BA548", "#629036", "#4E7A2C", "#3D6524", "#2F501C", "#223B15"] },
+    indigo:   { name: "Индиго", bg: ["#F4F5FA", "#0E0F16"], tray: ["#A9AEC4", "#1A1C29"], cell: ["#C0C4D6", "#252838"], ink: ["#4A4F6B", "#E4E6F2"],
+        tiles: ["#E6E8F4", "#D6D9EE", "#B6BCE4", "#949CD8", "#757ECC", "#5A62BE", "#474DA6", "#383D8A", "#2B2F6E", "#202353", "#17193B"] },
+    cherry:   { name: "Вишня", bg: ["#FBF4F4", "#150E0E"], tray: ["#C2A5A5", "#2A1A1A"], cell: ["#D6BCBC", "#382424"], ink: ["#6B4444", "#F4E4E4"],
+        tiles: ["#F2E2E2", "#EBCFCF", "#E0ADAD", "#D48989", "#C86666", "#BC4747", "#A63737", "#8C2C2C", "#732424", "#5A1C1C", "#421515"] },
+};
+
+// Цвет цифры – как в игре: из тёплого почти-чёрного и белого тот, что
+// контрастнее с плиткой (WCAG 2.1).
+function luminance(hex) {
+    const ch = i => { const v = parseInt(hex.slice(i, i + 2), 16) / 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; };
+    return 0.2126 * ch(1) + 0.7152 * ch(3) + 0.0722 * ch(5);
+}
+function contrast(a, b) { const x = luminance(a), y = luminance(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
+const inkOn = bg => contrast(bg, "#181412") >= contrast(bg, "#FFFFFF") ? "#181412" : "#FFFFFF";
+
+const dark = matchMedia("(prefers-color-scheme: dark)");
+const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+let theme = THEMES.classic;
+
+function applyTheme() {
+    const i = dark.matches ? 1 : 0, s = document.documentElement.style;
+    s.setProperty("--bg", theme.bg[i]); s.setProperty("--tray", theme.tray[i]);
+    s.setProperty("--cell", theme.cell[i]); s.setProperty("--ink", theme.ink[i]);
+    s.setProperty("--t2", theme.tiles[1]); s.setProperty("--t3", theme.tiles[2]);
+    document.querySelectorAll(".badge .on-light").forEach(e => e.style.display = dark.matches ? "none" : "block");
+    document.querySelectorAll(".badge .on-dark").forEach(e => e.style.display = dark.matches ? "block" : "none");
+    render();
+}
+dark.addEventListener("change", applyTheme);
+
+const palettes = document.getElementById("palettes");
+for (const [id, t] of Object.entries(THEMES)) {
+    const label = document.createElement("label");
+    label.className = "swatch";
+    label.innerHTML = `<input type="radio" name="palette" value="${id}"${id === "classic" ? " checked" : ""}>
+        <span aria-hidden="true" style="background:${t.tray[0]}">${t.tiles.slice(2, 6).map(c => `<i style="background:${c}"></i>`).join("")}</span>
+        <span class="vh">${t.name}</span>`;
+    palettes.append(label);
+}
+palettes.addEventListener("change", e => { theme = THEMES[e.target.value]; applyTheme(); });
+
+// --- Игра: 4×4, степени двойки -------------------------------------------
+const N = 4, boardEl = document.getElementById("board");
+let instant = false, tiles = [], nextId = 1, score = 0, idleTimer = null, autoTimer = null, userPlayed = false;
+
+for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+    const cell = document.createElement("div"); cell.className = "cell"; place(cell, r, c); boardEl.append(cell);
+}
+function place(el, r, c) {
+    const step = `calc((var(--board) - var(--gap)) / ${N})`;
+    el.style.transform = `translate(calc(var(--gap) + ${step} * ${c}), calc(var(--gap) + ${step} * ${r}))`;
+}
+function spawn() {
+    const free = [];
+    for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) if (!tiles.some(t => t.r === r && t.c === c)) free.push([r, c]);
+    if (!free.length) return;
+    const [r, c] = free[Math.floor(Math.random() * free.length)];
+    tiles.push({ id: nextId++, v: Math.random() < 0.9 ? 2 : 4, r, c, isNew: true });
+}
+
+// Ход: возвращает, сдвинулось ли что-нибудь. dir: 0 вверх, 1 вправо, 2 вниз, 3 влево.
+function move(dir, dry = false) {
+    const grid = Array.from({ length: N }, () => Array(N).fill(null));
+    const src = dry ? tiles.map(t => ({ ...t })) : tiles;
+    src.forEach(t => { grid[t.r][t.c] = t; t.isNew = false; t.merged = false; });
+    const vertical = dir === 0 || dir === 2, forward = dir === 1 || dir === 2;
+    let moved = false, gained = 0; const removed = new Set();
+    for (let line = 0; line < N; line++) {
+        const cells = [];
+        for (let k = 0; k < N; k++) { const i = forward ? N - 1 - k : k; const t = vertical ? grid[i][line] : grid[line][i]; if (t) cells.push(t); }
+        let pos = 0, last = null;
+        for (const t of cells) {
+            if (last && last.v === t.v && !last.merged) {
+                last.v *= 2; last.merged = true; gained += last.v; removed.add(t);
+                t.r = last.r; t.c = last.c; moved = true;
+                continue;
+            }
+            const i = forward ? N - 1 - pos : pos; pos++;
+            const r = vertical ? i : line, c = vertical ? line : i;
+            if (t.r !== r || t.c !== c) moved = true;
+            t.r = r; t.c = c; last = t;
+        }
+    }
+    if (dry) return moved;
+    if (moved) {
+        score += gained;
+        const finish = () => { tiles = tiles.filter(t => !removed.has(t)); spawn(); render(); if (!canMove()) setTimeout(reset, 1800); };
+        if (instant) { finish(); return moved; }
+        render(removed);
+        setTimeout(finish, reduced.matches ? 0 : 120);
+    }
+    return moved;
+}
+const canMove = () => [0, 1, 2, 3].some(d => move(d, true));
+
+const els = new Map();
+function render(removed = new Set()) {
+    const i = dark.matches ? 1 : 0;
+    for (const t of tiles) {
+        let el = els.get(t.id);
+        if (!el) {
+            // Новая плитка встаёт сразу на своё место: иначе она выезжала бы
+            // из левого верхнего угла, откуда её начинает CSS.
+            el = document.createElement("div"); el.className = "tile";
+            el.style.transition = "none"; place(el, t.r, t.c);
+            boardEl.append(el); els.set(t.id, el);
+            void el.offsetWidth; el.style.transition = "";
+        }
+        const level = Math.min(Math.log2(t.v) - 1, theme.tiles.length - 1);
+        const bg = theme.tiles[level];
+        el.textContent = t.v;
+        el.style.background = bg; el.style.color = inkOn(bg);
+        el.classList.toggle("big", t.v >= 128 && t.v < 1024);
+        el.classList.toggle("huge", t.v >= 1024);
+        el.classList.toggle("new", !!t.isNew);
+        el.classList.toggle("merged", !!t.merged && !removed.has(t));
+        if (removed.has(t)) el.style.zIndex = 0; else el.style.zIndex = 1;
+        place(el, t.r, t.c);
+    }
+    for (const [id, el] of els) if (!tiles.some(t => t.id === id)) { el.remove(); els.delete(id); }
+    document.getElementById("score").value = score;
+}
+function reset() { tiles = []; score = 0; spawn(); spawn(); render(); }
+
+// Без человека доска играет сама: держит крупное в углу, как живой игрок.
+function autoStep() {
+    const order = [2, 3, 1, 0];
+    const dir = order.find(d => move(d, true));
+    if (dir !== undefined) move(dir);
+}
+function startAuto() {
+    if (reduced.matches) return;
+    clearInterval(autoTimer); autoTimer = setInterval(autoStep, 1100);
+}
+function userMove(dir) {
+    clearInterval(autoTimer); clearTimeout(idleTimer);
+    if (!userPlayed) { userPlayed = true; document.getElementById("hint").textContent = "Играете вы"; }
+    move(dir);
+    idleTimer = setTimeout(startAuto, 8000);
+}
+
+boardEl.addEventListener("keydown", e => {
+    const dir = { ArrowUp: 0, ArrowRight: 1, ArrowDown: 2, ArrowLeft: 3, w: 0, d: 1, s: 2, a: 3 }[e.key];
+    if (dir === undefined) return;
+    e.preventDefault(); userMove(dir);
+});
+let touch = null;
+boardEl.addEventListener("pointerdown", e => { touch = [e.clientX, e.clientY]; boardEl.setPointerCapture(e.pointerId); });
+boardEl.addEventListener("pointerup", e => {
+    if (!touch) return;
+    const dx = e.clientX - touch[0], dy = e.clientY - touch[1]; touch = null;
+    if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) return;
+    userMove(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0));
+});
+
+reset();
+applyTheme();
+// Немного «сыгранной» партии, чтобы доска не начиналась с пустоты.
+instant = true; for (let k = 0; k < 14; k++) autoStep(); instant = false;
+for (const t of tiles) { t.isNew = false; t.merged = false; } render();
+idleTimer = setTimeout(startAuto, 2500);
+</script>
+</body>
+</html>
