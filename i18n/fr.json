@@ -69,7 +69,7 @@
     "title": "Études : une position donnée, un objectif, quelques coups",
     "body": "Formez 128 en quatre coups, ou ne laissez que cinq tuiles sur le plateau. Aucune nouvelle tuile n’apparaît, tout ce qu’il vous faut est donc déjà là – et chaque étude a une solution exacte.",
     "points": [
-      "84 études en sept chapitres, du 3×3 à Fibonacci en 5×5",
+      "96 études en huit chapitres, du 3×3 aux puissances de 3 en 5×5",
       "Un indice montre le premier coup ; après un échec, le jeu rejoue la solution",
       "Une étude du jour gratuite pour tous, plus longue vers la fin de la semaine"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Cinq chapitres d’études en plus",
+        "label": "Six chapitres d’études en plus",
         "free": false,
         "plus": true
       },

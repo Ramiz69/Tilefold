@@ -69,7 +69,7 @@
     "title": "Etüden: eine fertige Stellung, ein Ziel, ein paar Züge",
     "body": "Erreiche 128 in vier Zügen oder lass nur fünf Kacheln auf dem Feld. Neue Kacheln erscheinen nicht, alles Nötige liegt also schon da – und jede Etüde hat eine exakte Lösung.",
     "points": [
-      "84 Etüden in sieben Kapiteln, von 3×3 bis Fibonacci auf 5×5",
+      "96 Etüden in acht Kapiteln, von 3×3 bis zu 3er-Potenzen auf 5×5",
       "Ein Tipp zeigt den ersten Zug; nach einem Fehlversuch spielt das Spiel die Lösung vor",
       "Eine kostenlose Etüde des Tages für alle, zum Wochenende hin länger"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Fünf weitere Etüden-Kapitel",
+        "label": "Sechs weitere Etüden-Kapitel",
         "free": false,
         "plus": true
       },

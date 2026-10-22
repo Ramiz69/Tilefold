@@ -69,7 +69,7 @@
     "title": "Etudes: a set position, a goal, a few moves",
     "body": "Make 128 in four moves, or leave just five tiles on the board. No new tiles appear, so everything you need is already there – and every etude has an exact solution.",
     "points": [
-      "84 etudes in seven chapters, from 3×3 to Fibonacci on 5×5",
+      "96 etudes in eight chapters, from 3×3 to powers of three on 5×5",
       "A hint shows the first move; after a miss, the game replays the solution",
       "A free etude of the day for everyone, longer towards the end of the week"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Five more chapters of etudes",
+        "label": "Six more chapters of etudes",
         "free": false,
         "plus": true
       },

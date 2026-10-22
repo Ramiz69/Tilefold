@@ -69,7 +69,7 @@
     "title": "Estudios: una posición lista, un objetivo y pocos movimientos",
     "body": "Consigue 128 en cuatro movimientos o deja solo cinco fichas en el tablero. No aparecen fichas nuevas, así que todo lo que necesitas ya está ahí – y cada estudio tiene una solución exacta.",
     "points": [
-      "84 estudios en siete capítulos, de 3×3 a Fibonacci en 5×5",
+      "96 estudios en ocho capítulos, de 3×3 a potencias de 3 en 5×5",
       "Una pista muestra el primer movimiento; tras un fallo, el juego te enseña la solución",
       "Un estudio del día gratis para todos, más largo hacia el final de la semana"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Cinco capítulos más de estudios",
+        "label": "Seis capítulos más de estudios",
         "free": false,
         "plus": true
       },

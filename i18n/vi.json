@@ -69,7 +69,7 @@
     "title": "Thế cờ: một thế bày sẵn, một nhiệm vụ, vài nước đi",
     "body": "Ghép ra 128 trong bốn nước, hoặc chỉ để lại năm ô trên bảng. Không có ô mới xuất hiện, nên mọi thứ bạn cần đã có sẵn – và thế cờ nào cũng có lời giải chính xác.",
     "points": [
-      "84 thế cờ trong bảy chương, từ 3×3 đến Fibonacci trên 5×5",
+      "96 thế cờ trong tám chương, từ 3×3 đến lũy thừa 3 trên 5×5",
       "Gợi ý cho biết nước đầu tiên; sau khi thất bại, trò chơi chiếu lại lời giải",
       "Thế cờ hôm nay miễn phí cho mọi người, càng gần cuối tuần càng dài"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Thêm năm chương thế cờ",
+        "label": "Thêm sáu chương thế cờ",
         "free": false,
         "plus": true
       },

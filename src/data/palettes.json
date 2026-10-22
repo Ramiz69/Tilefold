@@ -1,7 +1,7 @@
 {
   "_comment": "Палитры игры – из Tilefold/Appearance/Theme.swift: фон, поднос, клетки и цвет управления (светлый, тёмный) и плитки по уровням 2, 4, 8, … Плитки в тёмной теме те же. plus – палитра из Tilefold Plus.",
   "palettes": [
-    { "id": "classic", "bg": ["#FAF8EF", "#141210"], "tray": ["#BBADA0", "#1E1C19"], "cell": ["#CCC0B3", "#2A2724"], "ink": ["#776E65", "#F5EFE6"],
+    { "id": "classic", "bg": ["#FAF8EF", "#141210"], "tray": ["#BBADA0", "#1E1C19"], "cell": ["#CCC0B3", "#2A2724"], "ink": ["#665E56", "#F5EFE6"],
       "tiles": ["#EEE4DA", "#EDE0C8", "#F2B179", "#F59563", "#F67C5F", "#F65E3B", "#EDCF72", "#EDCC61", "#EDC850", "#EDC53F", "#EDC22E", "#ADB777", "#AAB766", "#A4B74F", "#A1B73F"] },
     { "id": "sunset", "bg": ["#FDF6F0", "#160F0D"], "tray": ["#C9B4A6", "#241715"], "cell": ["#DCC8BB", "#33211E"], "ink": ["#8E4A3A", "#FBE7DA"],
       "tiles": ["#FEDFB4", "#FFC98A", "#FFAC5E", "#FF8A5B", "#FF6B6B", "#F45B69", "#D1434E", "#B8323F", "#8E1F2C", "#7A1526", "#5E0E1E"] },

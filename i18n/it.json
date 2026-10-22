@@ -69,7 +69,7 @@
     "title": "Studi: una posizione pronta, un obiettivo, poche mosse",
     "body": "Crea 128 in quattro mosse o lascia solo cinque tessere sulla griglia. Non compaiono nuove tessere, quindi tutto ciò che ti serve è già lì – e ogni studio ha una soluzione esatta.",
     "points": [
-      "84 studi in sette capitoli, da 3×3 a Fibonacci su 5×5",
+      "96 studi in otto capitoli, da 3×3 alle potenze di 3 su 5×5",
       "Un suggerimento mostra la prima mossa; dopo un errore, il gioco ti fa vedere la soluzione",
       "Uno studio del giorno gratuito per tutti, più lungo verso la fine della settimana"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Altri cinque capitoli di studi",
+        "label": "Altri sei capitoli di studi",
         "free": false,
         "plus": true
       },

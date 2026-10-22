@@ -69,7 +69,7 @@
     "title": "Studi: posisi siap, satu tugas, beberapa langkah",
     "body": "Buat 128 dalam empat langkah, atau sisakan hanya lima ubin di papan. Tidak ada ubin baru, jadi semua yang Anda perlukan sudah ada di papan – dan setiap studi punya solusi pasti.",
     "points": [
-      "84 studi dalam tujuh bab, dari 3×3 sampai Fibonacci di 5×5",
+      "96 studi dalam delapan bab, dari 3×3 sampai pangkat 3 di 5×5",
       "Petunjuk menunjukkan langkah pertama; setelah gagal, game memperlihatkan solusinya",
       "Studi hari ini gratis untuk semua orang, makin panjang menjelang akhir pekan"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Lima bab studi lainnya",
+        "label": "Enam bab studi lainnya",
         "free": false,
         "plus": true
       },

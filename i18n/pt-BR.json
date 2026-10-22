@@ -69,7 +69,7 @@
     "title": "Estudos: uma posição pronta, um objetivo e poucas jogadas",
     "body": "Forme 128 em quatro jogadas ou deixe só cinco peças no tabuleiro. Não aparecem peças novas, então tudo de que você precisa já está lá – e todo estudo tem uma solução exata.",
     "points": [
-      "84 estudos em sete capítulos, de 3×3 a Fibonacci em 5×5",
+      "96 estudos em oito capítulos, de 3×3 a potências de 3 em 5×5",
       "Uma dica mostra a primeira jogada; depois de um erro, o jogo mostra a solução",
       "Um estudo do dia grátis para todo mundo, mais longo perto do fim da semana"
     ],
@@ -176,7 +176,7 @@
         "plus": true
       },
       {
-        "label": "Mais cinco capítulos de estudos",
+        "label": "Mais seis capítulos de estudos",
         "free": false,
         "plus": true
       },
